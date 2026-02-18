@@ -65,49 +65,22 @@ import Layout from '../../layouts/Layout.astro';
 
   <!-- 뉴스레터 -->
   <section class="bg-blue-600 text-white py-16">
-    <div class="container-max text-center">
-      <h2 class="text-3xl font-bold mb-4">뉴스레터 구독</h2>
-      <p class="text-xl text-blue-100 mb-8">최신 기술 소식과 팁을 이메일로 받아보세요</p>
-      <form method="POST" action="/api/subscribe" class="max-w-md mx-auto flex gap-2" id="newsletter-form">
-        <input 
-          type="email" 
-          name="email"
-          placeholder="이메일을 입력해주세요" 
-          required
-          class="flex-1 px-4 py-3 rounded text-gray-900 focus:outline-none"
-        />
-        <button type="submit" class="px-6 py-3 bg-white text-blue-600 font-bold rounded hover:bg-gray-100 transition-colors">
-          구독
-        </button>
-      </form>
-      <p id="subscribe-message" class="text-blue-100 text-sm mt-3"></p>
+    <div class="container-max">
+      <h2 class="text-3xl font-bold mb-4 text-center">뉴스레터 구독</h2>
+      <p class="text-xl text-blue-100 mb-8 text-center">최신 기술 소식과 팁을 이메일로 받아보세요</p>
+      <div class="max-w-2xl mx-auto">
+        <iframe 
+          src="https://docs.google.com/forms/d/e/1FAIpQLSc85vx3LESnhprEsxMA/viewform?embedded=true" 
+          width="100%" 
+          height="600" 
+          frameborder="0" 
+          marginheight="0" 
+          marginwidth="0"
+          class="rounded"
+        >
+          로드 중…
+        </iframe>
+      </div>
     </div>
   </section>
-
-  <script>
-    document.getElementById('newsletter-form')?.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const email = (document.querySelector('input[name="email"]') as HTMLInputElement).value;
-      const messageEl = document.getElementById('subscribe-message');
-      
-      try {
-        const response = await fetch('/api/subscribe', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email })
-        });
-        
-        const data = await response.json();
-        if (response.ok) {
-          messageEl!.textContent = '✅ 구독해주셔서 감사합니다!';
-          (document.querySelector('input[name="email"]') as HTMLInputElement).value = '';
-          setTimeout(() => { messageEl!.textContent = ''; }, 3000);
-        } else {
-          messageEl!.textContent = '❌ ' + (data.message || '구독 실패');
-        }
-      } catch (error) {
-        messageEl!.textContent = '❌ 오류가 발생했습니다';
-      }
-    });
-  </script>
 </Layout>
