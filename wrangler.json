@@ -1,0 +1,21 @@
+{
+  "name": "helflab-website",
+  "type": "javascript",
+  "main": "dist/server/entry.mjs",
+  "site": {
+    "bucket": "./dist/client"
+  },
+  "build": {
+    "command": "npm run build",
+    "cwd": "./",
+    "watch_paths": ["src/**/*.{astro,ts,tsx}"]
+  },
+  "env": {
+    "production": {
+      "vars": {
+        "GOOGLE_SCRIPT_URL": ""
+      }
+    }
+  },
+  "compatibility_date": "2026-02-18"
+}
