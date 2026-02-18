@@ -20,7 +20,7 @@ import Layout from '../layouts/Layout.astro';
             <span class="text-2xl">📍</span>
           </div>
           <h3 class="text-xl font-bold mb-2">주소</h3>
-          <p class="text-gray-600">서울특별시 강남구<br />대한민국</p>
+          <p class="text-gray-600">서울시 성동구 서울숲2길 32-14<br />캘러리아포레 지하1층 B108-1호<br />대한민국</p>
         </div>
         
         <div class="bg-white p-8 rounded-lg shadow">
@@ -29,7 +29,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <h3 class="text-xl font-bold mb-2">이메일</h3>
           <p class="text-gray-600">
-            <a href="mailto:info@helflab.com" class="text-blue-600 hover:text-blue-700 font-semibold">info@helflab.com</a>
+            <a href="mailto:helflab@helflab.co.kr" class="text-blue-600 hover:text-blue-700 font-semibold">helflab@helflab.co.kr</a>
           </p>
         </div>
         
@@ -39,7 +39,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <h3 class="text-xl font-bold mb-2">전화</h3>
           <p class="text-gray-600">
-            <a href="tel:+82-2-1234-5678" class="text-blue-600 hover:text-blue-700 font-semibold">+82-2-1234-5678</a>
+            <a href="tel:02-6909-5710" class="text-blue-600 hover:text-blue-700 font-semibold">02-6909-5710</a>
           </p>
         </div>
       </div>
@@ -47,13 +47,15 @@ import Layout from '../layouts/Layout.astro';
       <!-- 연락 양식 -->
       <div class="max-w-2xl mx-auto bg-gray-50 p-8 rounded-lg">
         <h2 class="text-2xl font-bold mb-6">문의 양식</h2>
-        <form class="space-y-6">
+        <form method="POST" action="/api/send-email" class="space-y-6">
           <div>
             <label for="name" class="block text-sm font-medium text-gray-700 mb-2">이름</label>
             <input 
               type="text" 
               id="name" 
+              name="name"
               placeholder="이름을 입력해주세요"
+              required
               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
             />
           </div>
@@ -63,7 +65,9 @@ import Layout from '../layouts/Layout.astro';
             <input 
               type="email" 
               id="email" 
+              name="email"
               placeholder="이메일을 입력해주세요"
+              required
               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
             />
           </div>
@@ -73,6 +77,7 @@ import Layout from '../layouts/Layout.astro';
             <input 
               type="tel" 
               id="phone" 
+              name="phone"
               placeholder="전화번호를 입력해주세요"
               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
             />
@@ -83,7 +88,9 @@ import Layout from '../layouts/Layout.astro';
             <input 
               type="text" 
               id="subject" 
+              name="subject"
               placeholder="문의 제목을 입력해주세요"
+              required
               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
             />
           </div>
@@ -92,8 +99,10 @@ import Layout from '../layouts/Layout.astro';
             <label for="message" class="block text-sm font-medium text-gray-700 mb-2">메시지</label>
             <textarea 
               id="message" 
+              name="message"
               rows="6" 
               placeholder="문의사항을 자세히 입력해주세요"
+              required
               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-none"
             ></textarea>
           </div>
@@ -113,8 +122,31 @@ import Layout from '../layouts/Layout.astro';
   <section class="py-16 bg-gray-50">
     <div class="container-max">
       <h2 class="text-3xl font-bold mb-8 text-center">방문하기</h2>
-      <div class="bg-gray-300 h-96 rounded-lg flex items-center justify-center">
-        <p class="text-gray-600">지도가 표시됩니다</p>
+      <div class="rounded-lg overflow-hidden shadow-lg">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3129.8849825826857!2d127.05340512346907!3d37.54485697137886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357caea05368f305%3A0x8c3b8f9e8e8e8e8e!2s%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%9C%EC%9A%B8%EC%88%B2%202%EA%B8%B8%2032-14!5e0!3m2!1sko!2skr!4v1708251600000" 
+          width="100%" 
+          height="400" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          class="w-full h-96">
+        </iframe>
+      </div>
+      <div class="mt-8 bg-white p-8 rounded-lg shadow">
+        <h3 class="text-xl font-bold mb-4">오시는 길</h3>
+        <p class="text-gray-700 mb-4">
+          <strong>주소:</strong> 서울시 성동구 서울숲2길 32-14 캘러리아포레 지하1층 B108-1호
+        </p>
+        <p class="text-gray-700 mb-4">
+          <strong>교통:</strong>
+        </p>
+        <ul class="list-disc list-inside text-gray-700 space-y-2">
+          <li>지하철: 서울숲역(분당선) 2번출구 도보 5분</li>
+          <li>버스: 성동구청, 용답역 정류장 근처</li>
+          <li>자동차: 무료 주차장 이용 가능</li>
+        </ul>
       </div>
     </div>
   </section>
