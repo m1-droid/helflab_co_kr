@@ -1,0 +1,244 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="파트너십" currentPath="/partnership">
+  <!-- Partnership 헤더 -->
+  <section class="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white py-20">
+    <div class="container-max">
+      <h1 class="text-5xl font-bold mb-4">HELFLAB 파트너십</h1>
+      <p class="text-2xl text-blue-100">글로벌 16개국, 50+ 브랜드가 함께하는 성장 네트워크에 참여하세요</p>
+    </div>
+  </section>
+
+  <!-- 파트너십 유형 -->
+  <section class="py-20 bg-white">
+    <div class="container-max">
+      <h2 class="text-4xl font-bold mb-12 text-center text-gray-900">HELFLAB의 3가지 파트너십 모델</h2>
+      
+      <div class="grid grid-cols-3 gap-8">
+        <!-- 모델 1: 소싱 파트너 -->
+        <div class="border-2 border-blue-200 rounded-xl p-8 hover:shadow-xl transition-shadow">
+          <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+            <span class="text-3xl">🏭</span>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">소싱 파트너</h3>
+          <p class="text-gray-700 mb-6 leading-relaxed">
+            귀사의 상품을 글로벌 브랜드에 공급하는 파트너십입니다. HELFLAB의 검증된 판매망과 물류 인프라를 통해 안정적인 매출 기반을 구축하세요.
+          </p>
+          <ul class="space-y-3 text-sm text-gray-700 mb-8">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span>글로벌 16개국 판매망 활용</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span>50+ 플랫폼 노출</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span>안정적 수금 시스템</span>
+            </li>
+          </ul>
+          <a href="#contact-form" class="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition-colors">
+            문의하기
+          </a>
+        </div>
+
+        <!-- 모델 2: 유통 파트너 -->
+        <div class="border-2 border-cyan-200 rounded-xl p-8 hover:shadow-xl transition-shadow">
+          <div class="w-14 h-14 bg-cyan-100 rounded-lg flex items-center justify-center mb-6">
+            <span class="text-3xl">🌐</span>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">유통 파트너</h3>
+          <p class="text-gray-700 mb-6 leading-relaxed">
+            귀사의 브랜드를 HELFLAB의 물류망과 데이터 시스템을 통해 다채널 판매 확대를 돕는 파트너십입니다. 급속한 성장이 필요한 브랜드에 최적입니다.
+          </p>
+          <ul class="space-y-3 text-sm text-gray-700 mb-8">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600 font-bold">✓</span>
+              <span>일일 4,400+건 처리 능력</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600 font-bold">✓</span>
+              <span>2시간 이내 배송처리</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600 font-bold">✓</span>
+              <span>AI 기반 재고 최적화</span>
+            </li>
+          </ul>
+          <a href="#contact-form" class="inline-block px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-bold rounded-lg transition-colors">
+            문의하기
+          </a>
+        </div>
+
+        <!-- 모델 3: 크로스보더 파트너 -->
+        <div class="border-2 border-slate-200 rounded-xl p-8 hover:shadow-xl transition-shadow">
+          <div class="w-14 h-14 bg-slate-100 rounded-lg flex items-center justify-center mb-6">
+            <span class="text-3xl">✈️</span>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">크로스보더 파트너</h3>
+          <p class="text-gray-700 mb-6 leading-relaxed">
+            중국, 동남아 등 해외 시장 진출을 목표로 하는 브랜드를 위한 풀 서비스 파트너십입니다. 현지화부터 배송까지 모두 지원합니다.
+          </p>
+          <ul class="space-y-3 text-sm text-gray-700 mb-8">
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600 font-bold">✓</span>
+              <span>중국 20+ 플랫폼 진출 지원</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600 font-bold">✓</span>
+              <span>현지 창고 운영</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600 font-bold">✓</span>
+              <span>현지화 및 마케팅 지원</span>
+            </li>
+          </ul>
+          <a href="#contact-form" class="inline-block px-6 py-3 bg-slate-600 hover:bg-slate-700 text-white font-bold rounded-lg transition-colors">
+            문의하기
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 파트너 혜택 -->
+  <section class="bg-gray-50 py-20">
+    <div class="container-max">
+      <h2 class="text-4xl font-bold mb-12 text-center text-gray-900">HELFLAB 파트너의 핵심 혜택</h2>
+      
+      <div class="grid grid-cols-2 gap-8">
+        <div class="p-8 bg-white rounded-xl border border-gray-200">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+            <span>📊</span> 데이터 기반 의사결정
+          </h3>
+          <p class="text-gray-700">
+            3,700만 건의 거래 데이터와 AI 분석을 통해 시장 트렌드, 재고 최적화, 가격 전략까지 모든 의사결정을 데이터로 뒷받침합니다.
+          </p>
+        </div>
+
+        <div class="p-8 bg-white rounded-xl border border-gray-200">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+            <span>🚀</span> 글로벌 확장 가능성
+          </h3>
+          <p class="text-gray-700">
+            한국 시장에서 시작하여 중국, 동남아, 전 세계로 확대할 수 있는 체계적인 글로벌 확장 시스템을 제공합니다.
+          </p>
+        </div>
+
+        <div class="p-8 bg-white rounded-xl border border-gray-200">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+            <span>⚙️</span> 통합 시스템 지원
+          </h3>
+          <p class="text-gray-700">
+            ERP, WMS, MMS, PIM, MPS의 5가지 통합 시스템을 제공하여 모든 운영을 자동화하고 최적화합니다.
+          </p>
+        </div>
+
+        <div class="p-8 bg-white rounded-xl border border-gray-200">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+            <span>🤝</span> 전담 지원 팀
+          </h3>
+          <p class="text-gray-700">
+            각 파트너마다 전담 팀을 배치하여 물류, 마케팅, 운영까지 모든 분야에서 맞춤형 지원을 제공합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 파트너 사례 -->
+  <section class="py-20 bg-white">
+    <div class="container-max">
+      <h2 class="text-4xl font-bold mb-12 text-center text-gray-900">파트너의 성공 사례</h2>
+      
+      <div class="space-y-8">
+        <div class="grid grid-cols-3 gap-8">
+          <div class="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl border border-blue-200">
+            <p class="text-sm text-gray-600 mb-2">K-패션 브랜드 A</p>
+            <h4 class="text-lg font-bold text-gray-900 mb-3">중국 시장 진출 6개월 만에 월매출 300만 위안 달성</h4>
+            <p class="text-sm text-gray-700">Taobao, Tmall, Douyin 3개 플랫폼 동시 운영으로 첫해 목표 200%달성</p>
+          </div>
+          
+          <div class="p-6 bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl border border-cyan-200">
+            <p class="text-sm text-gray-600 mb-2">라이프스타일 브랜드 B</p>
+            <h4 class="text-lg font-bold text-gray-900 mb-3">일 평균 처리량 500건에서 3,000건으로 6배 확대</h4>
+            <p class="text-sm text-gray-700">스마트 물류 시스템으로 품절 상황 95% 예방, 고객만족도 NPS 82점 달성</p>
+          </div>
+          
+          <div class="p-6 bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl border border-slate-200">
+            <p class="text-sm text-gray-600 mb-2">코스메틱 브랜드 C</p>
+            <h4 class="text-lg font-bold text-gray-900 mb-3">다채널 판매 전략으로 연매출 500% 성장</h4>
+            <p class="text-sm text-gray-700">한국, 중국, 동남아 시장에 동시 진출하여 글로벌 브랜드로 도약</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 문의 양식 -->
+  <section id="contact-form" class="py-20 bg-gray-50">
+    <div class="container-max max-w-2xl">
+      <h2 class="text-3xl font-bold mb-8 text-center text-gray-900">파트너십 문의</h2>
+      
+      <form class="bg-white p-8 rounded-xl shadow-lg space-y-6">
+        <div class="grid grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-bold text-gray-900 mb-2">회사명</label>
+            <input type="text" placeholder="귀사의 회사명" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" />
+          </div>
+          <div>
+            <label class="block text-sm font-bold text-gray-900 mb-2">담당자명</label>
+            <input type="text" placeholder="담당자명" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-bold text-gray-900 mb-2">이메일</label>
+            <input type="email" placeholder="example@company.com" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" />
+          </div>
+          <div>
+            <label class="block text-sm font-bold text-gray-900 mb-2">전화번호</label>
+            <input type="tel" placeholder="010-1234-5678" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-bold text-gray-900 mb-2">관심 파트너십</label>
+          <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
+            <option>선택해주세요</option>
+            <option>소싱 파트너</option>
+            <option>유통 파트너</option>
+            <option>크로스보더 파트너</option>
+            <option>기타</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-sm font-bold text-gray-900 mb-2">상품 분류</label>
+          <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
+            <option>선택해주세요</option>
+            <option>패션</option>
+            <option>코스메틱</option>
+            <option>라이프스타일</option>
+            <option>전자제품</option>
+            <option>식품</option>
+            <option>기타</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-sm font-bold text-gray-900 mb-2">문의사항</label>
+          <textarea rows="6" placeholder="파트너십에 관심이 있는 이유와 구체적인 문의사항을 입력해주세요." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-none"></textarea>
+        </div>
+
+        <button type="submit" class="w-full px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition-colors">
+          파트너십 문의 접수
+        </button>
+      </form>
+    </div>
+  </section>
+</Layout>
