@@ -3,150 +3,155 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="연락처" currentPath="/contact">
-  <!-- 연락처 헤더 -->
-  <section class="bg-gradient-to-r from-blue-50 to-indigo-50 py-16">
-    <div class="container-max">
-      <h1 class="text-4xl font-bold text-gray-900 mb-4">연락처</h1>
-      <p class="text-xl text-gray-600">언제든지 문의주세요. 빠르게 답변드리겠습니다.</p>
+  <!-- 연락처 헤더: 컬리 스타일의 차분한 배경 -->
+  <section class="bg-[#f7f7f7] py-24 border-b border-slate-100">
+    <div class="container-max reveal text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-8 tracking-tighter text-slate-900 uppercase">Contact Us</h1>
+      <p class="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed font-medium">비즈니스 파트너의 성공을 위해 헬프랩의 모든 시스템이 열려 있습니다.<br class="hidden md:block"/> 궁금하신 점은 언제든지 문의주세요.</p>
     </div>
   </section>
 
   <!-- 연락처 정보 및 폼 -->
-  <section class="py-16">
+  <section class="py-32 bg-white">
     <div class="container-max">
-      <div class="grid grid-cols-3 gap-8 mb-16">
-        <div class="bg-white p-8 rounded-lg shadow">
-          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-            <span class="text-2xl">📍</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2">주소</h3>
-          <p class="text-gray-600">서울시 성동구 서울숲2길 32-14<br />캘러리아포레 지하1층 B108-1호<br />대한민국</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-32 border-b border-slate-50 pb-20">
+        <div class="reveal">
+          <div class="text-2xl mb-6">📍</div>
+          <h3 class="text-[11px] font-black text-[#5f0080] uppercase tracking-widest mb-4">Our Office</h3>
+          <p class="text-slate-900 font-bold mb-2">서울시 성동구 서울숲2길 32-14</p>
+          <p class="text-slate-500 text-sm leading-relaxed font-medium">갤러리아포레 지하1층 B108-1호</p>
         </div>
         
-        <div class="bg-white p-8 rounded-lg shadow">
-          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-            <span class="text-2xl">📧</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2">이메일</h3>
-          <p class="text-gray-600">
-            <a href="mailto:helflab@helflab.co.kr" class="text-blue-600 hover:text-blue-700 font-semibold">helflab@helflab.co.kr</a>
-          </p>
+        <div class="reveal reveal-delay-1 border-x border-slate-50 px-0 md:px-12">
+          <div class="text-2xl mb-6">📧</div>
+          <h3 class="text-[11px] font-black text-[#5f0080] uppercase tracking-widest mb-4">Partnership Email</h3>
+          <p class="text-slate-900 font-bold mb-2">비즈니스 제휴 및 입점 문의</p>
+          <a href="mailto:helflab@helflab.co.kr" class="text-slate-500 text-sm hover:text-[#5f0080] transition-colors leading-relaxed font-medium underline underline-offset-4 decoration-[#5f0080]/20">helflab@helflab.co.kr</a>
         </div>
         
-        <div class="bg-white p-8 rounded-lg shadow">
-          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-            <span class="text-2xl">📞</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2">전화</h3>
-          <p class="text-gray-600">
-            <a href="tel:02-6909-5710" class="text-blue-600 hover:text-blue-700 font-semibold">02-6909-5710</a>
-          </p>
+        <div class="reveal reveal-delay-2">
+          <div class="text-2xl mb-6">☎️</div>
+          <h3 class="text-[11px] font-black text-[#5f0080] uppercase tracking-widest mb-4">Direct Line</h3>
+          <p class="text-slate-900 font-bold mb-2">고객센터 및 긴급 상담</p>
+          <a href="tel:02-6909-5710" class="text-slate-500 text-sm hover:text-[#5f0080] transition-colors leading-relaxed font-medium">02-6909-5710</a>
         </div>
       </div>
 
-      <!-- 연락 양식 -->
-      <div class="max-w-2xl mx-auto bg-gray-50 p-8 rounded-lg">
-        <h2 class="text-2xl font-bold mb-6">문의 양식</h2>
-        <form method="POST" action="/api/send-email" class="space-y-6">
-          <div>
-            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">이름</label>
+      <!-- 연락 양식: 컬리 스타일의 정제된 미니멀 폼 -->
+      <div class="max-w-xl mx-auto reveal reveal-delay-3 px-6">
+        <div class="text-center mb-16">
+           <h2 class="text-3xl font-black text-slate-900 mb-4 tracking-tighter">Send a Message</h2>
+           <p class="text-slate-500 text-sm font-medium">24시간 이내에 담당 팀이 회신해 드립니다.</p>
+        </div>
+        
+        <form method="POST" action="/api/send-email" class="space-y-12">
+          <div class="space-y-4">
+            <label for="name" class="block text-[11px] font-black text-[#5f0080] uppercase tracking-widest">Your Name</label>
             <input 
               type="text" 
               id="name" 
               name="name"
-              placeholder="이름을 입력해주세요"
+              placeholder="성함을 입력해주세요"
               required
-              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+              class="w-full border-b border-slate-200 py-3 focus:outline-none focus:border-[#5f0080] transition-colors placeholder:text-slate-300 font-medium bg-transparent"
             />
           </div>
 
-          <div>
-            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">이메일</label>
+          <div class="space-y-4">
+            <label for="email" class="block text-[11px] font-black text-[#5f0080] uppercase tracking-widest">Email Address</label>
             <input 
               type="email" 
               id="email" 
               name="email"
-              placeholder="이메일을 입력해주세요"
+              placeholder="example@helflab.co.kr"
               required
-              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+              class="w-full border-b border-slate-200 py-3 focus:outline-none focus:border-[#5f0080] transition-colors placeholder:text-slate-300 font-medium bg-transparent"
             />
           </div>
 
-          <div>
-            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">전화번호</label>
+          <div class="space-y-4">
+            <label for="phone" class="block text-[11px] font-black text-[#5f0080] uppercase tracking-widest">Contact Number</label>
             <input 
               type="tel" 
               id="phone" 
               name="phone"
-              placeholder="전화번호를 입력해주세요"
-              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+              placeholder="010-0000-0000"
+              class="w-full border-b border-slate-200 py-3 focus:outline-none focus:border-[#5f0080] transition-colors placeholder:text-slate-300 font-medium bg-transparent"
             />
           </div>
 
-          <div>
-            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">제목</label>
-            <input 
-              type="text" 
-              id="subject" 
-              name="subject"
-              placeholder="문의 제목을 입력해주세요"
-              required
-              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
-            />
-          </div>
-
-          <div>
-            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">메시지</label>
+          <div class="space-y-4">
+            <label for="message" class="block text-[11px] font-black text-[#5f0080] uppercase tracking-widest">Message Details</label>
             <textarea 
               id="message" 
               name="message"
-              rows="6" 
-              placeholder="문의사항을 자세히 입력해주세요"
+              rows="5" 
+              placeholder="문의하실 내용을 자유롭게 적어주세요."
               required
-              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-none"
+              class="w-full border-b border-slate-200 py-3 focus:outline-none focus:border-[#5f0080] transition-colors placeholder:text-slate-300 resize-none font-medium bg-transparent"
             ></textarea>
           </div>
 
-          <button 
-            type="submit"
-            class="w-full btn-primary bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg"
-          >
-            보내기
-          </button>
+          <div class="pt-8">
+            <button 
+              type="submit"
+              class="w-full bg-[#5f0080] text-white py-6 font-black tracking-[0.2em] rounded-sm hover:bg-[#4a0063] transition-all uppercase text-sm shadow-xl shadow-[#5f0080]/10"
+            >
+              Send Information
+            </button>
+          </div>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- 지도 -->
-  <section class="py-16 bg-gray-50">
+  <!-- 지도 섹션: 정제된 레이아웃 -->
+  <section class="py-32 bg-[#fcfcfc] border-t border-slate-50">
     <div class="container-max">
-      <h2 class="text-3xl font-bold mb-8 text-center">방문하기</h2>
-      <div class="rounded-lg overflow-hidden shadow-lg">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3129.8849825826857!2d127.05340512346907!3d37.54485697137886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357caea05368f305%3A0x8c3b8f9e8e8e8e8e!2s%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%9C%EC%9A%B8%EC%88%B2%202%EA%B8%B8%2032-14!5e0!3m2!1sko!2skr!4v1708251600000" 
-          width="100%" 
-          height="400" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade"
-          class="w-full h-96">
-        </iframe>
+      <div class="text-center mb-20 reveal">
+        <h2 class="text-3xl font-black text-slate-900 mb-6 tracking-tighter">Find Us</h2>
+        <div class="w-10 h-1 bg-[#5f0080] mx-auto"></div>
       </div>
-      <div class="mt-8 bg-white p-8 rounded-lg shadow">
-        <h3 class="text-xl font-bold mb-4">오시는 길</h3>
-        <p class="text-gray-700 mb-4">
-          <strong>주소:</strong> 서울시 성동구 서울숲2길 32-14 캘러리아포레 지하1층 B108-1호
-        </p>
-        <p class="text-gray-700 mb-4">
-          <strong>교통:</strong>
-        </p>
-        <ul class="list-disc list-inside text-gray-700 space-y-2">
-          <li>지하철: 서울숲역(분당선) 2번출구 도보 5분</li>
-          <li>버스: 성동구청, 용답역 정류장 근처</li>
-          <li>자동차: 무료 주차장 이용 가능</li>
-        </ul>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div class="reveal reveal-delay-1 order-2 lg:order-1">
+          <div class="rounded-sm overflow-hidden shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3129.8849825826857!2d127.05340512346907!3d37.54485697137886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357caea05368f305%3A0x8c3b8f9e8e8e8e8e!2s%EC%84%9C%EC%9A%B8%20%EC%84%B1%EB%8F%99%EA%B5%AC%20%EC%84%9C%EC%9A%B8%EC%88%B2%202%EA%B8%B8%2032-14!5e0!3m2!1sko!2skr!4v1708251600000" 
+              width="100%" 
+              height="450" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              class="w-full">
+            </iframe>
+          </div>
+        </div>
+        
+        <div class="reveal reveal-delay-2 order-1 lg:order-2 space-y-12">
+          <div>
+            <h3 class="text-xs font-black text-[#5f0080] uppercase tracking-widest mb-6 italic">Route to Office</h3>
+            <p class="text-slate-900 font-bold text-xl mb-4 leading-relaxed">
+              성수동의 깊은 가치와 맞닿아 있는<br/>헬프랩 서울 오피스입니다.
+            </p>
+            <p class="text-slate-500 font-medium text-sm leading-relaxed">
+              서울시 성동구 서울숲2길 32-14<br/>
+              갤러리아포레 지하1층 B108-1호 (헬프랩)
+            </p>
+          </div>
+          
+          <div class="space-y-8 pt-8 border-t border-slate-100">
+            <div class="flex gap-6">
+              <span class="text-[#5f0080] font-black text-[10px] w-12 pt-1">SUBWAY</span>
+              <p class="text-slate-600 font-medium text-sm">서울숲역 (수인분당선) 1, 2번 출구 도보 5분<br/>뚝섬역 (2호선) 8번 출구 도보 10분</p>
+            </div>
+            <div class="flex gap-6">
+              <span class="text-[#5f0080] font-black text-[10px] w-12 pt-1">CAR</span>
+              <p class="text-slate-600 font-medium text-sm">갤러리아포레 정문 진입 후 지하 주차장 이용<br/>(방문객 주차 등록 지원)</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>

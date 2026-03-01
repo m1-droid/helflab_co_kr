@@ -3,42 +3,61 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="HELFLAB - 브랜드 성장 파트너" currentPath="/about">
-  <!-- 소개 헤더 -->
-  <section class="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white py-20">
-    <div class="container-max">
-      <h1 class="text-5xl font-bold text-gray-100 mb-4">HELFLAB (헬프랩)</h1>
-      <p class="text-2xl text-blue-100">AI 기반 데이터 분석과 글로벌 네트워크를 활용한 차세대 커머스 인프라를 제공하는</p>
-      <p class="text-2xl text-blue-100 font-bold">브랜드 성장 파트너</p>
+  <!-- 소개 히어로: 컬리 스타일의 정갈한 배경 -->
+  <section class="bg-[#f7f7f7] py-24 border-b border-slate-100 overflow-hidden">
+    <div class="container-max reveal text-center">
+      <div class="mb-8">
+        <span class="text-[#5f0080] text-sm font-bold tracking-widest px-4 py-1 border border-[#5f0080] rounded-full">
+          ABOUT HELFLAB
+        </span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-8 tracking-tighter text-slate-900 leading-[1.2]">
+        브랜드 성장의<br class="md:hidden" />
+        <span class="text-[#5f0080]">가장 정교한 엔진</span>
+      </h1>
+      <p class="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed">
+        AI 기반 데이터 분석과 글로벌 네트워크를 결합하여<br class="hidden md:block" />
+        차세대 커머스 인프라를 혁신하는 브랜드 성장 파트너입니다.
+      </p>
     </div>
   </section>
 
   <!-- 미션 / 비전 / 가치 -->
-  <section class="py-20 bg-white">
+  <section class="py-24 bg-white">
     <div class="container-max">
-      <div class="grid grid-cols-3 gap-8 mb-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
         <!-- 미션 -->
-        <div class="p-10 bg-gradient-to-br from-blue-50 to-slate-50 rounded-xl border-l-4 border-blue-600">
-          <h3 class="text-2xl font-bold text-blue-900 mb-4">🎯 미션</h3>
-          <p class="text-lg text-gray-800 font-semibold">
-            신뢰할 수 있는 인프라와 전략적 실행력을 통해 차세대 커머스를 선도합니다.
+        <div class="p-10 bg-[#fbfbfb] border border-slate-50 reveal hover:shadow-lg transition-all">
+          <h3 class="text-xl font-bold text-[#5f0080] mb-6 tracking-tight">🎯 MISSION</h3>
+          <p class="text-slate-600 leading-relaxed font-medium">
+            신뢰할 수 있는 인프라와 전략적 실행력을 통해 차세대 커머스의 표준을 제시합니다.
           </p>
         </div>
         
         <!-- 비전 -->
-        <div class="p-10 bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl border-l-4 border-cyan-600">
-          <h3 class="text-2xl font-bold text-cyan-900 mb-4">🌟 비전</h3>
-          <p class="text-lg text-gray-800 font-semibold">
-            브랜드의 가장 신뢰받는 성장 파트너로서, AI 기반 데이터 분석과 글로벌 네트워크를 활용한 새로운 쇼핑 경험의 진화를 이끕니다.
+        <div class="p-10 bg-[#fbfbfb] border border-slate-50 reveal reveal-delay-1 hover:shadow-lg transition-all">
+          <h3 class="text-xl font-bold text-[#5f0080] mb-6 tracking-tight">🌟 VISION</h3>
+          <p class="text-slate-600 leading-relaxed font-medium">
+            AI 기반 데이터 분석과 글로벌 네트워크를 활용하여 국경 없는 쇼핑 경험의 진화를 선도합니다.
           </p>
         </div>
         
         <!-- 핵심가치 -->
-        <div class="p-10 bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl border-l-4 border-slate-600">
-          <h3 class="text-2xl font-bold text-slate-900 mb-4">⭐ 핵심 가치</h3>
-          <ul class="space-y-2 text-gray-800">
-            <li class="font-semibold">Integrity – 신뢰 기반</li>
-            <li class="font-semibold">Agility – 빠른 실행</li>
-            <li class="font-semibold">Partnership – 진정한 성장</li>
+        <div class="p-10 bg-[#fbfbfb] border border-slate-50 reveal reveal-delay-2 hover:shadow-lg transition-all">
+          <h3 class="text-xl font-bold text-[#5f0080] mb-6 tracking-tight">⭐ CORE VALUE</h3>
+          <ul class="space-y-4 text-slate-600 font-medium">
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#5f0080]"></span>
+              Integrity – 데이터 기반의 신뢰
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#5f0080]"></span>
+              Agility – AI 시스템 전제 속도
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#5f0080]"></span>
+              Partnership – 동반 성장의 가치
+            </li>
           </ul>
         </div>
       </div>
@@ -46,315 +65,135 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- 핵심 가치 상세 -->
-  <section class="bg-gray-50 py-20">
+  <section class="bg-[#fcfcfc] py-24 border-y border-slate-50">
     <div class="container-max">
-      <h2 class="text-4xl font-bold mb-12 text-center text-gray-900">HELFLAB의 3가지 핵심 가치</h2>
+      <h2 class="text-3xl font-bold mb-16 text-center text-slate-900 reveal">HELFLAB Core Value</h2>
       
-      <div class="space-y-12">
+      <div class="space-y-20">
         <!-- Integrity -->
-        <div class="grid grid-cols-2 gap-12 items-center p-8 bg-white rounded-xl shadow-lg">
-          <div>
-            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
-              <span class="text-3xl">🛡️</span>
-            </div>
-            <h3 class="text-3xl font-bold text-gray-900 mb-4">Integrity</h3>
-            <h4 class="text-xl font-semibold text-blue-600 mb-3">데이터로 증명하는 신뢰</h4>
-            <p class="text-gray-700 leading-relaxed">
-              정품 유통, 투명한 거래, 검증된 성과 데이터를 통해 브랜드와 소비자 모두에게 신뢰 가능한 커머스 생태계를 구축합니다. 25년간 축적한 무사고 레퍼런스가 그 증명입니다.
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center reveal">
+          <div class="order-2 md:order-1">
+            <div class="text-[#5f0080] font-black italic text-6xl opacity-10 mb-2">01</div>
+            <h3 class="text-3xl font-bold text-slate-900 mb-6">Integrity</h3>
+            <h4 class="text-lg font-semibold text-[#5f0080] mb-4">데이터로 증명하는 100% 신뢰</h4>
+            <p class="text-slate-500 leading-relaxed">
+              정품 유통과 투명한 거래 데이터를 기반으로 브랜드와 소비자 모두에게 신뢰 가능한 커머스 생태계를 구축합니다. 25년간의 무사고 레퍼런스가 헬프랩의 진정성을 대변합니다.
             </p>
           </div>
-          <div class="bg-gradient-to-br from-blue-100 to-cyan-100 h-96 rounded-xl flex items-end justify-center p-6">
-            <div class="text-6xl">📊</div>
+          <div class="order-1 md:order-2 bg-white border border-slate-100 h-80 rounded-sm flex items-center justify-center shadow-sm">
+            <span class="text-8xl grayscale opacity-20">🛡️</span>
           </div>
         </div>
         
         <!-- Agility -->
-        <div class="grid grid-cols-2 gap-12 items-center p-8 bg-white rounded-xl shadow-lg">
-          <div class="bg-gradient-to-br from-cyan-100 to-blue-100 h-96 rounded-xl flex items-end justify-center p-6">
-            <div class="text-6xl">⚡</div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center reveal">
+          <div class="bg-white border border-slate-100 h-80 rounded-sm flex items-center justify-center shadow-sm">
+            <span class="text-8xl grayscale opacity-20">⚡</span>
           </div>
           <div>
-            <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
-              <span class="text-3xl">🚀</span>
-            </div>
-            <h3 class="text-3xl font-bold text-gray-900 mb-4">Agility</h3>
-            <h4 class="text-xl font-semibold text-cyan-600 mb-3">AI 기반 실행 속도</h4>
-            <p class="text-gray-700 leading-relaxed">
-              시장 변화와 소비자 트렌드를 AI로 실시간 분석하여, 데이터 기반 의사결정과 빠른 실행으로 경쟁 우위를 만듭니다. 3,700만 건의 거래 데이터가 우리의 실행력을 뒷받침합니다.
+            <div class="text-[#5f0080] font-black italic text-6xl opacity-10 mb-2">02</div>
+            <h3 class="text-3xl font-bold text-slate-900 mb-6">Agility</h3>
+            <h4 class="text-lg font-semibold text-[#5f0080] mb-4">AI로 구현하는 초격차 실행 속도</h4>
+            <p class="text-slate-500 leading-relaxed">
+              시장 트렌드와 판매 데이터를 AI로 실시간 분석하여 데이터 기반의 의사결정과 빠른 실행으로 경쟁 우위를 만듭니다. 우리는 사람의 직관이 아닌 시스템의 정밀함으로 움직입니다.
             </p>
           </div>
         </div>
         
         <!-- Partnership -->
-        <div class="grid grid-cols-2 gap-12 items-center p-8 bg-white rounded-xl shadow-lg">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center reveal">
           <div>
-            <div class="w-16 h-16 bg-gradient-to-br from-slate-600 to-blue-600 rounded-xl flex items-center justify-center mb-6">
-              <span class="text-3xl">🤝</span>
-            </div>
-            <h3 class="text-3xl font-bold text-gray-900 mb-4">Partnership</h3>
-            <h4 class="text-xl font-semibold text-slate-700 mb-3">성장 데이터 공유</h4>
-            <p class="text-gray-700 leading-relaxed">
-              단기 매출이 아닌, 브랜드의 장기 성장을 위한 데이터 인사이트와 시장 분석을 공유하는 진정한 성장 파트너십을 지향합니다. 우리의 성공은 파트너의 성공입니다.
+            <div class="text-[#5f0080] font-black italic text-6xl opacity-10 mb-2">03</div>
+            <h3 class="text-3xl font-bold text-slate-900 mb-6">Partnership</h3>
+            <h4 class="text-lg font-semibold text-[#5f0080] mb-4">지속 가능한 성장의 가치 공유</h4>
+            <p class="text-slate-500 leading-relaxed">
+              단기적 이익이 아닌, 브랜드의 장기적 성장을 위한 데이터 인사이트를 투명하게 공유합니다. 헬프랩의 모든 시스템은 파트너의 성공을 위해 최적화되어 있습니다.
             </p>
           </div>
-          <div class="bg-gradient-to-br from-slate-100 to-blue-100 h-96 rounded-xl flex items-end justify-center p-6">
-            <div class="text-6xl">🌐</div>
+          <div class="bg-white border border-slate-100 h-80 rounded-sm flex items-center justify-center shadow-sm">
+            <span class="text-8xl grayscale opacity-20">🤝</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 회사 정보 -->
-  <section class="py-20 bg-white">
+  <!-- 리더십 & AI 에이전트: 모바일 우선의 정갈한 레이아웃 -->
+  <section class="py-24 bg-white">
     <div class="container-max">
-      <h2 class="text-4xl font-bold mb-12 text-gray-900">회사 정보</h2>
+      <div class="text-center mb-20 reveal">
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Our Unique Team</h2>
+        <p class="text-slate-500">25년의 노하우와 커스텀 AI 에이전트가 완벽한 팀워크를 이룹니다.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-24">
+        <!-- Captain -->
+        <div class="p-10 bg-[#fbfbfb] border border-slate-50 reveal hover:shadow-md transition-all">
+          <h4 class="text-[#5f0080] font-bold text-sm mb-4 uppercase tracking-widest">Captain / CEO</h4>
+          <h3 class="text-3xl font-bold text-slate-900 mb-6 tracking-tighter">유종현</h3>
+          <p class="text-slate-600 leading-relaxed mb-8">
+            25년 경력의 마케팅 전문가이자 AI 에이전트 조직의 설계자입니다. 브랜드 론칭부터 글로벌 유통까지 실전 경험을 보유하고 있으며, 미래형 기업 운영 모델을 직접 구축하고 있습니다.
+          </p>
+          <div class="text-xs text-slate-400 font-bold border-t border-slate-100 pt-6">
+            Strategy / Budget / Go-No 판단
+          </div>
+        </div>
+
+        <!-- CTO -->
+        <div class="p-10 bg-[#fbfbfb] border border-slate-50 reveal reveal-delay-1 hover:shadow-md transition-all">
+          <h4 class="text-[#5f0080] font-bold text-sm mb-4 uppercase tracking-widest">CTO / Architect</h4>
+          <h3 class="text-3xl font-bold text-slate-900 mb-6 tracking-tighter">족장</h3>
+          <p class="text-slate-600 leading-relaxed mb-8">
+            AI 에이전트 조직의 전체 시스템을 설계하는 기술 총괄입니다. 프롬프트 엔지니어링과 워크플로우 아키텍처를 담당하며, 사람이 아닌 '시스템'이 일하는 문화를 기술로 완성합니다.
+          </p>
+          <div class="text-xs text-slate-400 font-bold border-t border-slate-100 pt-6">
+            AI System / Workflow / Tech Innovation
+          </div>
+        </div>
+      </div>
+
+      <!-- AI 에이전트 팀 (모바일 가독성 중심) -->
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 reveal reveal-delay-2">
+        {[
+          { name: '루미', role: 'Staff', icon: '📋' },
+          { name: '셀라', role: 'Sales', icon: '💰' },
+          { name: '벨리', role: 'Analyst', icon: '📈' },
+          { name: '채니', role: 'Ops', icon: '⚙️' },
+          { name: '크리', role: 'Creator', icon: '🎨' },
+          { name: '퍼포', role: 'Mkt', icon: '🚀' },
+          { name: '데브', role: 'Dev', icon: '💻' }
+        ].map((agent) => (
+          <div class="bg-[#fbfbfb] border border-slate-50 p-6 text-center hover:border-[#5f0080] transition-colors cursor-default group">
+            <div class="text-2xl mb-4 group-hover:scale-110 transition-transform">{agent.icon}</div>
+            <div class="font-bold text-slate-900 text-sm mb-1">{agent.name}</div>
+            <div class="text-[10px] text-[#5f0080] font-black uppercase tracking-tighter">{agent.role}</div>
+          </div>
+        ))}
+      </div>
       
-      <div class="grid grid-cols-2 gap-12">
-        <div>
-          <h3 class="text-2xl font-bold text-gray-900 mb-6">글로벌 네트워크</h3>
-          <ul class="space-y-4 text-lg text-gray-700">
-            <li class="flex items-start gap-3">
-              <span class="text-2xl">🌍</span>
-              <span><strong>16개국</strong> 브랜드 파트너십</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-2xl">📦</span>
-              <span><strong>50+</strong> 플랫폼 운영</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-2xl">🏭</span>
-              <span><strong>7,000평</strong> 물류센터 (용인)</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-2xl">📊</span>
-              <span>일 평균 <strong>4,400+건</strong> 주문 처리</span>
-            </li>
-          </ul>
-        </div>
-        
-        <div>
-          <h3 class="text-2xl font-bold text-gray-900 mb-6">기술 스택</h3>
-          <div class="grid grid-cols-2 gap-4">
-            <div class="p-4 bg-blue-50 rounded-lg border border-blue-200">
-              <p class="font-bold text-blue-900 mb-2">ERP</p>
-              <p class="text-gray-700 text-sm">통합 관리 시스템</p>
-            </div>
-            <div class="p-4 bg-cyan-50 rounded-lg border border-cyan-200">
-              <p class="font-bold text-cyan-900 mb-2">WMS</p>
-              <p class="text-gray-700 text-sm">창고 관리 시스템</p>
-            </div>
-            <div class="p-4 bg-blue-50 rounded-lg border border-blue-200">
-              <p class="font-bold text-blue-900 mb-2">MMS</p>
-              <p class="text-gray-700 text-sm">상품정보 관리</p>
-            </div>
-            <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
-              <p class="font-bold text-slate-900 mb-2">PIM/MPS</p>
-              <p class="text-gray-700 text-sm">채널 최적화</p>
-            </div>
-          </div>
-        </div>
+      <div class="mt-8 text-center reveal reveal-delay-3 px-6 py-4 bg-[#f8f0ff] rounded-sm inline-block mx-auto">
+        <p class="text-[13px] text-[#5f0080] font-medium leading-relaxed">
+          * 헬프랩의 모든 AI 에이전트는 독립적인 페르소나와 최적화된 프롬프트를 가지고 실제 업무를 수행합니다.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- 팀 소개 -->
-  <section class="py-20 bg-gray-50">
-    <div class="container-max">
-      <h2 class="text-4xl font-bold mb-4 text-center text-gray-900">HELFLAB의 팀</h2>
-      <p class="text-xl text-center text-gray-600 mb-16">25년 마케팅 경험과 AI 기술을 결합한 다재다능한 팀</p>
-
-      <!-- 리더십 -->
-      <div class="mb-20">
-        <h3 class="text-3xl font-bold mb-12 text-gray-900">리더십</h3>
-        <div class="grid grid-cols-2 gap-8">
-          <!-- 유종현 | CEO -->
-          <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-blue-600">
-            <div class="mb-6">
-              <h4 class="text-2xl font-bold text-gray-900 mb-2">유종현</h4>
-              <p class="text-lg text-blue-600 font-semibold">캡틴 (CEO & Founder)</p>
-            </div>
-            <p class="text-gray-700 leading-relaxed mb-6">
-              25년 경력의 마케팅 전문가이자 AI 기반 사업가. 브랜드 론칭부터 퍼포먼스 마케팅, 유통 전략까지 풀사이클 마케팅 실전 경험을 보유하고 있으며, AI 에이전트 조직을 직접 설계·운영하여 1인 기업의 새로운 운영 모델을 구축 중입니다.
-            </p>
-            <div class="space-y-2 text-sm text-gray-700">
-              <p class="font-semibold text-gray-900">📋 주요 역할</p>
-              <ul class="space-y-1 ml-4">
-                <li>• 사업 방향 결정 및 전략 수립</li>
-                <li>• 예산 승인 및 리소스 배분</li>
-                <li>• Go/No-Go 최종 판단</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- 족장 | CTO -->
-          <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-cyan-600">
-            <div class="mb-6">
-              <h4 class="text-2xl font-bold text-gray-900 mb-2">족장</h4>
-              <p class="text-lg text-cyan-600 font-semibold">CTO (System Architect)</p>
-            </div>
-            <p class="text-gray-700 leading-relaxed mb-6">
-              헬프랩 AI 에이전트 조직의 전체 시스템을 설계·구축하는 기술 총괄. 에이전트 추가·삭제·프롬프트 설계·모델 선정·워크플로우 아키텍처를 담당하며, 사람이 아닌 AI 조직을 엔지니어링하는 새로운 역할을 수행합니다.
-            </p>
-            <div class="space-y-2 text-sm text-gray-700">
-              <p class="font-semibold text-gray-900">📋 주요 역할</p>
-              <ul class="space-y-1 ml-4">
-                <li>• AI 에이전트 시스템 설계·구축</li>
-                <li>• 워크플로우 아키텍처 최적화</li>
-                <li>• 기술 혁신 및 시스템 고도화</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- AI Agent Team -->
-      <div>
-        <h3 class="text-3xl font-bold mb-12 text-gray-900">AI Agent Team</h3>
-        <div class="grid grid-cols-7 gap-4">
-          <!-- 루미 | Chief of Staff -->
-          <div class="bg-white p-6 rounded-lg shadow border-t-4 border-blue-500">
-            <h4 class="font-bold text-gray-900 mb-1">루미 (Lumi)</h4>
-            <p class="text-sm text-blue-600 font-semibold mb-3">Chief of Staff</p>
-            <ul class="space-y-1 text-xs text-gray-700 leading-tight">
-              <li>• 조직 운영 총괄</li>
-              <li>• 업무 오케스트레이션</li>
-              <li>• 경영 브리핑</li>
-            </ul>
-          </div>
-
-          <!-- 셀라 | Sales Manager -->
-          <div class="bg-white p-6 rounded-lg shadow border-t-4 border-green-500">
-            <h4 class="font-bold text-gray-900 mb-1">셀라 (Sella)</h4>
-            <p class="text-sm text-green-600 font-semibold mb-3">Sales Manager</p>
-            <ul class="space-y-1 text-xs text-gray-700 leading-tight">
-              <li>• 재고 현금화</li>
-              <li>• 채널별 수익분석</li>
-              <li>• 판매 실행</li>
-            </ul>
-          </div>
-
-          <!-- 벨리 | Analyst -->
-          <div class="bg-white p-6 rounded-lg shadow border-t-4 border-purple-500">
-            <h4 class="font-bold text-gray-900 mb-1">벨리 (Vali)</h4>
-            <p class="text-sm text-purple-600 font-semibold mb-3">Revenue Analyst</p>
-            <ul class="space-y-1 text-xs text-gray-700 leading-tight">
-              <li>• 수익 검증</li>
-              <li>• 손익분석</li>
-              <li>• Go/Pivot/Kill 판정</li>
-            </ul>
-          </div>
-
-          <!-- 채니 | Operations -->
-          <div class="bg-white p-6 rounded-lg shadow border-t-4 border-orange-500">
-            <h4 class="font-bold text-gray-900 mb-1">채니 (Chani)</h4>
-            <p class="text-sm text-orange-600 font-semibold mb-3">Operations Mgr</p>
-            <ul class="space-y-1 text-xs text-gray-700 leading-tight">
-              <li>• 멀티채널 자동화</li>
-              <li>• 콘텐츠 캘린더</li>
-              <li>• KPI 관리</li>
-            </ul>
-          </div>
-
-          <!-- 크리 | Creator -->
-          <div class="bg-white p-6 rounded-lg shadow border-t-4 border-pink-500">
-            <h4 class="font-bold text-gray-900 mb-1">크리 (Cre)</h4>
-            <p class="text-sm text-pink-600 font-semibold mb-3">Content Creator</p>
-            <ul class="space-y-1 text-xs text-gray-700 leading-tight">
-              <li>• 숏폼/롱폼 제작</li>
-              <li>• 쇼퍼블 콘텐츠</li>
-              <li>• A/B 소재 개발</li>
-            </ul>
-          </div>
-
-          <!-- 퍼포 | Marketing -->
-          <div class="bg-white p-6 rounded-lg shadow border-t-4 border-red-500">
-            <h4 class="font-bold text-gray-900 mb-1">퍼포 (Perfo)</h4>
-            <p class="text-sm text-red-600 font-semibold mb-3">Marketing Spec</p>
-            <ul class="space-y-1 text-xs text-gray-700 leading-tight">
-              <li>• 광고 캠페인 설계</li>
-              <li>• A/B 테스트</li>
-              <li>• 퍼포먼스 관리</li>
-            </ul>
-          </div>
-
-          <!-- 데브 | Engineer -->
-          <div class="bg-white p-6 rounded-lg shadow border-t-4 border-slate-500">
-            <h4 class="font-bold text-gray-900 mb-1">데브 (Dev)</h4>
-            <p class="text-sm text-slate-600 font-semibold mb-3">Dev Engineer</p>
-            <ul class="space-y-1 text-xs text-gray-700 leading-tight">
-              <li>• 자동화 개발</li>
-              <li>• API 연동</li>
-              <li>• 데이터 파이프라인</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- AI Agent Team 상세 설명 -->
-        <div class="mt-12 space-y-6">
-          <div class="bg-blue-50 p-8 rounded-xl border border-blue-200">
-            <h4 class="text-xl font-bold text-blue-900 mb-4">루미 (Lumi) | Chief of Staff</h4>
-            <p class="text-gray-700 mb-4">헬프랩 AI 에이전트 조직의 총괄 매니저. 캡틴과 족장의 지시를 받아 6명의 서브에이전트를 조율하고, 업무 분배·진행 관리·일일/주간 브리핑을 담당합니다.</p>
-            <p class="text-gray-700 font-semibold">💡 특징: 모든 보고는 데이터 기반으로 제공하며, 실행 전 반드시 리스크 포인트를 제시하는 것을 원칙</p>
-          </div>
-
-          <div class="bg-green-50 p-8 rounded-xl border border-green-200">
-            <h4 class="text-xl font-bold text-green-900 mb-4">셀라 (Sella) | Sales & Liquidation Manager</h4>
-            <p class="text-gray-700 mb-4">보유 재고상품의 국내·해외 판매 전략을 수립하고 현금화를 실행하는 세일즈 전문 에이전트. 스마트스토어, 쿠팡, 11번가, Amazon, Shopee 등 주요 유통 채널의 수수료·물류비·마진을 비교 분석</p>
-            <p class="text-gray-700 font-semibold">💡 특징: 빠른 현금화와 최대 마진 두 가지 시나리오를 병행 제안</p>
-          </div>
-
-          <div class="bg-purple-50 p-8 rounded-xl border border-purple-200">
-            <h4 class="text-xl font-bold text-purple-900 mb-4">벨리 (Vali) | Revenue Validation Analyst</h4>
-            <p class="text-gray-700 mb-4">모든 마케팅 활동과 판매의 실제 수익성을 검증하는 손익분석 전문 에이전트. CAC, ROAS, LTV 등 핵심 지표를 추적하고, 주간 ROI 테이블과 함께 Go/Pivot/Kill 판정을 제공</p>
-            <p class="text-gray-700 font-semibold">💡 특징: 낙관적 보고에는 반드시 반론을 제시하여 의사결정의 균형을 맞춤</p>
-          </div>
-
-          <div class="bg-orange-50 p-8 rounded-xl border border-orange-200">
-            <h4 class="text-xl font-bold text-orange-900 mb-4">채니 (Chani) | Channel Operations Manager</h4>
-            <p class="text-gray-700 mb-4">블로그, 유튜브, 인스타그램, 쓰레드 등 멀티채널 운영을 자동화하는 채널 매니저. 채널별 콘텐츠 캘린더 구축, OSMU(One Source Multi Use) 변환 매트릭스 작성, 포스팅 스케줄링, KPI 모니터링을 담당</p>
-            <p class="text-gray-700 font-semibold">💡 특징: 알고리즘 변경에 대한 실시간 대응 체계를 운영</p>
-          </div>
-
-          <div class="bg-pink-50 p-8 rounded-xl border border-pink-200">
-            <h4 class="text-xl font-bold text-pink-900 mb-4">크리 (Cre) | Shoppable Content Creator</h4>
-            <p class="text-gray-700 mb-4">채널별 톤앤매너에 최적화된 쇼퍼블 콘텐츠를 기획·제작하는 크리에이티브 에이전트. 블로그 SEO 글, 인스타 캐러셀, 유튜브 쇼트 스크립트, 쓰레드 텍스트까지 플랫폼별 포맷에 맞춘 콘텐츠를 생성</p>
-            <p class="text-gray-700 font-semibold">💡 특징: 모든 콘텐츠에 명시적 CTA와 A/B 변형을 포함</p>
-          </div>
-
-          <div class="bg-red-50 p-8 rounded-xl border border-red-200">
-            <h4 class="text-xl font-bold text-red-900 mb-4">퍼포 (Perfo) | Performance Marketing Specialist</h4>
-            <p class="text-gray-700 mb-4">광고 캠페인 설계부터 실시간 성과 모니터링, 자동 개선까지 퍼포먼스 마케팅 전 과정을 실행하는 에이전트. CTR, CPC, CVR, CPA, ROAS 지표를 일일 추적하고, 임계값 이탈 시 소재 교체·타겟 조정을 자동 트리거</p>
-            <p class="text-gray-700 font-semibold">💡 특징: 모든 성과 데이터는 벨리에게 전달되어 수익 검증과 연동</p>
-          </div>
-
-          <div class="bg-slate-50 p-8 rounded-xl border border-slate-200">
-            <h4 class="text-xl font-bold text-slate-900 mb-4">데브 (Dev) | Automation & Development Engineer</h4>
-            <p class="text-gray-700 mb-4">API 연동, 자동화 스크립트, 랜딩페이지, 대시보드, 픽셀·태그 설치 등 기술적 실행을 담당하는 개발 에이전트. 노코드(Zapier, Make, GAS) 우선, 필요시 Python/Node.js 경량 스크립트, 직접 API 통합 순으로 최소 비용·최대 효율의 기술 솔루션을 제공</p>
-            <p class="text-gray-700 font-semibold">💡 특징: 최소 비용·최대 효율의 기술 솔루션 추구</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 연락처 정보 -->
-  <section class="bg-gradient-to-br from-slate-900 to-blue-900 text-white py-16">
-    <div class="container-max">
-      <h2 class="text-3xl font-bold mb-8">문의하기</h2>
-      <div class="grid grid-cols-3 gap-8">
-        <div>
-          <p class="text-blue-300 font-semibold mb-2">전화</p>
-          <p class="text-2xl font-bold">02-6909-5710</p>
-        </div>
-        <div>
-          <p class="text-blue-300 font-semibold mb-2">이메일</p>
-          <p class="text-lg font-bold">helflab@helflab.co.kr</p>
-        </div>
-        <div>
-          <p class="text-blue-300 font-semibold mb-2">주소</p>
-          <p class="text-sm">서울시 성동구 서울숲2길 32-14<br/>캘러리아포레 지하1층 B108-1호</p>
-        </div>
+  <!-- CTA 푸터 히어로 -->
+  <section class="bg-[#5f0080] text-white py-24 text-center overflow-hidden relative">
+    <div class="absolute top-0 left-0 w-full h-full opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+    <div class="container-max relative z-10 px-6">
+      <h2 class="text-3xl md:text-5xl font-bold mb-10 tracking-tighter leading-tight reveal">
+        귀사 브랜드의 새로운 성장 엔진,<br class="md:hidden" />
+        <span class="opacity-70">헬프랩과 함께 설계하세요.</span>
+      </h2>
+      <div class="flex flex-col md:flex-row gap-4 justify-center items-center reveal reveal-delay-1">
+        <a href="/partnership" class="bg-white text-[#5f0080] px-12 py-5 font-bold tracking-tight rounded-sm hover:bg-slate-50 transition-all w-full md:w-auto">
+          파트너십 문의하기
+        </a>
+        <a href="/contact" class="border border-white/30 px-12 py-5 font-bold tracking-tight rounded-sm hover:bg-white/10 transition-all w-full md:w-auto">
+           찾아오시는 길
+        </a>
       </div>
     </div>
   </section>

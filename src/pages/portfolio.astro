@@ -4,79 +4,93 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="포트폴리오" currentPath="/portfolio">
   <!-- 포트폴리오 헤더 -->
-  <section class="bg-gradient-to-r from-blue-50 to-indigo-50 py-16">
-    <div class="container-max">
-      <h1 class="text-4xl font-bold text-gray-900 mb-4">포트폴리오</h1>
-      <p class="text-xl text-gray-600">HelfLab이 완료한 주요 프로젝트들을 소개합니다</p>
+  <section class="bg-[#f7f7f7] py-20 border-b border-slate-100">
+    <div class="container-max reveal text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tighter">PORTFOLIO</h1>
+      <p class="text-lg text-slate-500 max-w-2xl mx-auto">HelfLab의 데이터 기술과 실행력이 증명된<br class="md:hidden" /> 주요 프로젝트들을 소개합니다.</p>
     </div>
   </section>
 
   <!-- 프로젝트 갤러리 -->
-  <section class="py-16">
+  <section class="py-24">
     <div class="container-max">
-      <div class="grid grid-cols-3 gap-8 mb-16">
-        {[1, 2, 3, 4, 5, 6].map((i) => (
-          <div class="group overflow-hidden rounded-lg shadow hover:shadow-xl transition-all">
-            <div class="bg-gradient-to-br from-blue-400 to-indigo-400 h-48 relative overflow-hidden">
-              <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity"></div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-24">
+        {[
+          { title: "글로벌 이커머스 통합 관리", desc: "16개국 판매 채널의 데이터를 실시간으로 동기화하고 재고를 최적화하는 시스템 구축", tag: "AI Ops" },
+          { title: "차세대 풀필먼트 자동화", desc: "주문 예측 AI 모델을 적용하여 미출고율을 0.5% 이하로 낮춘 물류 시스템 최적화", tag: "Logistics" },
+          { title: "브랜드 성장 가속화 캠페인", desc: "정밀 타켓팅과 OSMU 콘텐츠 자동생성 시스템으로 신규 유입 240% 달성", tag: "Growth" },
+          { title: "B2B 소싱 데이터 플랫폼", desc: "글로벌 제조사와 유통사를 데이터로 연결하여 소싱 비용을 18% 절감한 사례", tag: "Platform" },
+          { title: "실시간 재고 대시보드", desc: "멀티 채널의 실시간 재고를 한눈에 모니터링하고 자동 발주 시스템 연동", tag: "Data Biz" },
+          { title: "크로스보더 정산 자동화", desc: "다양한 통화와 국가별 수수료 체계를 자동 계산하여 정산 정확도 100% 달성", tag: "Fintech" }
+        ].map((item, i) => (
+          <div class={`group reveal reveal-delay-${i % 3} bg-white border border-slate-100 p-8 hover:shadow-xl transition-all`}>
+            <div class="bg-[#f8f0ff] h-48 mb-8 rounded-sm overflow-hidden flex items-center justify-center text-4xl grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-100 transition-all">
+               {['🌍', '📦', '🚀', '🏭', '📊', '✈️'][i]}
             </div>
-            <div class="p-6 bg-white">
-              <h3 class="font-bold text-lg mb-2">프로젝트 {i}</h3>
-              <p class="text-gray-600 text-sm mb-4">이 프로젝트는 고객의 비즈니스 요구사항을 충족시키는 혁신적인 솔루션입니다.</p>
-              <div class="flex gap-2 flex-wrap">
-                <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded">React</span>
-                <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">TypeScript</span>
-                <span class="bg-purple-100 text-purple-700 text-xs px-2 py-1 rounded">AWS</span>
-              </div>
+            <div class="mb-4">
+              <span class="text-[#5f0080] text-[10px] font-black uppercase tracking-widest px-2 py-0.5 border border-[#5f0080]/30 rounded-sm">
+                {item.tag}
+              </span>
+            </div>
+            <h3 class="font-bold text-xl text-slate-900 mb-4 tracking-tight">{item.title}</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">{item.desc}</p>
+            <div class="flex gap-2">
+               <span class="w-2 h-2 rounded-full bg-slate-100 group-hover:bg-[#5f0080] transition-colors"></span>
+               <span class="w-2 h-2 rounded-full bg-slate-100 group-hover:bg-[#5f0080] transition-colors delay-75"></span>
+               <span class="w-2 h-2 rounded-full bg-slate-100 group-hover:bg-[#5f0080] transition-colors delay-100"></span>
             </div>
           </div>
         ))}
       </div>
 
-      <!-- 프로젝트 상세 -->
-      <div class="mt-16 pt-16 border-t">
-        <h2 class="text-3xl font-bold mb-12">주요 프로젝트 소개</h2>
+      <!-- 주요 프로젝트 상세 -->
+      <div class="mt-24 pt-24 border-t border-slate-50">
+        <h2 class="text-3xl font-bold mb-16 text-slate-900 reveal tracking-tight">Main Case Study</h2>
         
-        <div class="mb-12">
-          <div class="grid grid-cols-2 gap-12 items-center">
-            <div>
-              <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop" alt="프로젝트" class="rounded-lg" />
+        <div class="space-y-32">
+          <!-- Portfolio 1 -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center reveal">
+            <div class="bg-[#fbfbfb] aspect-video rounded-sm flex items-center justify-center border border-slate-50 overflow-hidden group">
+              <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop" alt="프로젝트" class="grayscale group-hover:grayscale-0 transition-all duration-700" />
             </div>
             <div>
-              <h3 class="text-2xl font-bold mb-4">E-Commerce 플랫폼</h3>
-              <p class="text-gray-600 mb-4">풀 스택 e커머스 솔루션으로 실시간 재고 관리, 결제 시스템, 배송 추적 기능을 포함합니다.</p>
-              <ul class="list-disc list-inside text-gray-600 mb-4">
-                <li>150% 매출 증가</li>
-                <li>99.9% 가용성</li>
-                <li>50만+ 월간 사용자</li>
+              <div class="text-[#5f0080] font-bold text-sm mb-4 uppercase tracking-widest">Growth Engine</div>
+              <h3 class="text-3xl font-bold text-slate-900 mb-6 tracking-tighter leading-tight">E-Commerce<br/>AI Optimization Platform</h3>
+              <p class="text-slate-600 mb-8 leading-relaxed">단순한 판매를 넘어, 상품의 생애주기와 시장 트렌드를 AI가 학습하여 최적의 판매 타이밍과 가격을 결정하는 지능형 플랫폼입니다.</p>
+              <ul class="space-y-3 text-slate-500 mb-10">
+                <li class="flex items-center gap-3">
+                  <span class="text-[#5f0080]">✔</span> 150% 매출 증가 기여
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="text-[#5f0080]">✔</span> 재고 회전률 40% 개선
+                </li>
               </ul>
-              <div class="flex gap-2">
-                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded">Next.js</span>
-                <span class="bg-green-100 text-green-700 px-3 py-1 rounded">Node.js</span>
-                <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded">PostgreSQL</span>
-              </div>
+              <a href="/partnership" class="inline-block border-b-2 border-[#5f0080] text-[#5f0080] font-bold pb-1 hover:opacity-70 transition-opacity">
+                상세 상담하기 →
+              </a>
             </div>
           </div>
-        </div>
 
-        <div class="mb-12">
-          <div class="grid grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 class="text-2xl font-bold mb-4">실시간 분석 대시보드</h3>
-              <p class="text-gray-600 mb-4">기업의 실시간 데이터를 시각화하는 고성능 분석 대시보드입니다.</p>
-              <ul class="list-disc list-inside text-gray-600 mb-4">
-                <li>밀리초 단위의 데이터 갱신</li>
-                <li>직관적인 UI/UX</li>
-                <li>1000+ 동시 사용자 지원</li>
+          <!-- Portfolio 2 -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center reveal">
+            <div class="order-2 md:order-1">
+              <div class="text-[#5f0080] font-bold text-sm mb-4 uppercase tracking-widest">Infrastucture</div>
+              <h3 class="text-3xl font-bold text-slate-900 mb-6 tracking-tighter leading-tight">Real-time Global<br/>Logistics Dashboard</h3>
+              <p class="text-slate-600 mb-8 leading-relaxed">전 세계 16개국 물류 기지의 흐름을 단 하나의 대시보드에서 관리합니다. 지연 리스크를 사전에 예측하여 대응할 수 있는 시스템입니다.</p>
+              <ul class="space-y-3 text-slate-500 mb-10">
+                <li class="flex items-center gap-3">
+                  <span class="text-[#5f0080]">✔</span> 배송 지연율 85% 감소
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="text-[#5f0080]">✔</span> 물류비용 12% 절감 효과
+                </li>
               </ul>
-              <div class="flex gap-2">
-                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded">React</span>
-                <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded">WebSocket</span>
-                <span class="bg-red-100 text-red-700 px-3 py-1 rounded">Redis</span>
-              </div>
+              <a href="/partnership" class="inline-block border-b-2 border-[#5f0080] text-[#5f0080] font-bold pb-1 hover:opacity-70 transition-opacity">
+                솔루션 도입 문의 →
+              </a>
             </div>
-            <div>
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop" alt="분석 대시보드" class="rounded-lg" />
+            <div class="order-1 md:order-2 bg-[#fbfbfb] aspect-video rounded-sm flex items-center justify-center border border-slate-50 overflow-hidden group">
+               <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop" alt="분석 대시보드" class="grayscale group-hover:grayscale-0 transition-all duration-700" />
             </div>
           </div>
         </div>
@@ -84,25 +98,25 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- 통계 -->
-  <section class="bg-blue-600 text-white py-16">
-    <div class="container-max">
-      <div class="grid grid-cols-4 gap-8 text-center">
-        <div>
-          <div class="text-4xl font-bold mb-2">50+</div>
-          <p class="text-blue-100">완료된 프로젝트</p>
+  <!-- 통계: 컬리 스타일의 딥퍼플 배경 -->
+  <section class="bg-[#5f0080] text-white py-24 relative overflow-hidden">
+    <div class="container-max relative z-10">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center reveal">
+        <div class="border-l border-white/10 md:border-none">
+          <div class="text-4xl md:text-5xl font-black mb-3">50+</div>
+          <p class="text-white/60 text-xs font-bold uppercase tracking-widest">Projects</p>
         </div>
-        <div>
-          <div class="text-4xl font-bold mb-2">100+</div>
-          <p class="text-blue-100">만족한 고객</p>
+        <div class="border-l border-white/10">
+          <div class="text-4xl md:text-5xl font-black mb-3">16+</div>
+          <p class="text-white/60 text-xs font-bold uppercase tracking-widest">Countries</p>
         </div>
-        <div>
-          <div class="text-4xl font-bold mb-2">500+</div>
-          <p class="text-blue-100">개발 시간</p>
+        <div class="border-l border-white/10">
+          <div class="text-4xl md:text-5xl font-black mb-3">4.4K+</div>
+          <p class="text-white/60 text-xs font-bold uppercase tracking-widest">Daily Orders</p>
         </div>
-        <div>
-          <div class="text-4xl font-bold mb-2">99.9%</div>
-          <p class="text-blue-100">가용성</p>
+        <div class="border-l border-white/10">
+          <div class="text-4xl md:text-5xl font-black mb-3">25Y</div>
+          <p class="text-white/60 text-xs font-bold uppercase tracking-widest">Experience</p>
         </div>
       </div>
     </div>

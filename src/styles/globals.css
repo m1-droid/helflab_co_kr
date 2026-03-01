@@ -4,24 +4,47 @@
 
 @layer base {
   html {
-    @apply scroll-smooth;
+    @apply scroll-smooth antialiased;
+    font-family: 'Pretendard Variable', Pretendard, sans-serif;
   }
 
   body {
-    @apply bg-white text-gray-900;
+    @apply bg-white text-slate-900 leading-relaxed tracking-tight;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors;
+    @apply px-6 py-3 bg-[#5f0080] text-white rounded-md font-semibold hover:bg-[#4a0063] transition-all duration-300 transform active:scale-[0.98] text-center inline-block;
   }
 
   .btn-secondary {
-    @apply px-4 py-2 border-2 border-gray-300 text-gray-900 rounded hover:border-gray-400 transition-colors;
+    @apply px-6 py-3 border border-[#5f0080] text-[#5f0080] rounded-md font-semibold hover:bg-purple-50 transition-all duration-300 text-center inline-block;
   }
 
   .container-max {
-    @apply max-w-6xl mx-auto px-4;
+    @apply max-w-[1050px] mx-auto px-6 md:px-8;
+  }
+
+  /* 애니메이션 효과: 컬리 스타일의 차분한 등장 */
+  .reveal {
+    @apply opacity-0 translate-y-6 transition-all duration-700 pointer-events-none;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal.active {
+    @apply opacity-100 translate-y-0 pointer-events-auto;
+  }
+
+  .reveal-delay-1 {
+    transition-delay: 150ms;
+  }
+
+  .reveal-delay-2 {
+    transition-delay: 300ms;
+  }
+
+  .reveal-delay-3 {
+    transition-delay: 450ms;
   }
 }

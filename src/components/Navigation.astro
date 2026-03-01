@@ -15,19 +15,23 @@ const navItems = [
 ];
 ---
 
-<nav class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
-  <div class="container-max flex items-center justify-between py-4">
-    <a href="/" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">HELFLAB</a>
+<nav class="bg-white border-b border-slate-100 sticky top-0 z-50 transition-all duration-300">
+  <div class="container-max flex items-center justify-between py-6">
+    <!-- 로고: 컬리 느낌의 정제된 폰트 스타일 -->
+    <a href="/" class="text-3xl font-bold text-[#5f0080] tracking-tighter">
+      HELFLAB
+    </a>
     
-    <ul class="flex gap-8">
+    <!-- 데스크톱 메뉴: 컬리 스타일의 정갈한 메뉴 -->
+    <ul class="hidden md:flex gap-10">
       {navItems.map((item) => (
         <li>
           <a 
             href={item.href}
-            class={`font-semibold transition-colors ${
+            class={`relative text-base font-medium transition-colors py-2 ${
               currentPath === item.href
-                ? 'text-blue-600'
-                : 'text-gray-700 hover:text-blue-600'
+                ? 'text-[#5f0080]'
+                : 'text-slate-800 hover:text-[#5f0080]'
             }`}
           >
             {item.label}
@@ -35,5 +39,84 @@ const navItems = [
         </li>
       ))}
     </ul>
+
+    <!-- 모바일 메뉴 버튼: 보라색 포인트 -->
+    <button 
+      id="menu-toggle"
+      class="md:hidden flex flex-col items-center justify-center p-2 text-[#5f0080] focus:outline-none transition-colors"
+      aria-label="메뉴 열기"
+    >
+      <svg id="hamburger-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+      <svg id="close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- 모바일 슬라이드 메뉴: 깔끔한 화이트/퍼플 조합 -->
+  <div 
+    id="mobile-menu" 
+    class="fixed inset-0 top-[80px] bg-white transform translate-x-full transition-transform duration-300 ease-in-out z-40 md:hidden border-t border-slate-50"
+  >
+    <div class="flex flex-col p-8 gap-1">
+      {navItems.map((item) => (
+        <a 
+          href={item.href}
+          class={`text-xl font-medium p-4 transition-all border-b border-slate-50 ${
+            currentPath === item.href
+              ? 'text-[#5f0080]'
+              : 'text-slate-700 active:text-[#5f0080]'
+          }`}
+        >
+          {item.label}
+        </a>
+      ))}
+      <div class="mt-10 px-4">
+        <a href="/contact" class="btn-primary w-full py-4 text-center rounded-sm">
+          신규 파트너 입점 문의
+        </a>
+      </div>
+    </div>
   </div>
 </nav>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
+  let isMenuOpen = false;
+
+  function toggleMenu() {
+    isMenuOpen = !isMenuOpen;
+    
+    if (isMenuOpen) {
+      mobileMenu?.classList.remove('translate-x-full');
+      hamburgerIcon?.classList.add('hidden');
+      closeIcon?.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    } else {
+      mobileMenu?.classList.add('translate-x-full');
+      hamburgerIcon?.classList.remove('hidden');
+      closeIcon?.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+  }
+
+  menuToggle?.addEventListener('click', toggleMenu);
+
+  const mobileNavLinks = mobileMenu?.querySelectorAll('a');
+  mobileNavLinks?.forEach(link => {
+    link.addEventListener('click', () => {
+      if (isMenuOpen) toggleMenu();
+    });
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768 && isMenuOpen) {
+      toggleMenu();
+    }
+  });
+</script>

@@ -21,13 +21,44 @@ const { title, description = 'HelfLab - 회사소개 및 제품 기술 소식', 
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta name="theme-color" content="#2563eb" />
+    <meta name="theme-color" content="#5f0080" />
+    
+    <!-- Fonts -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
   </head>
-  <body>
+  <body class="selection:bg-purple-100 selection:text-purple-900">
     <Navigation currentPath={currentPath} />
     <main class="min-h-screen">
       <slot />
     </main>
     <Footer />
+
+    <script>
+      // IntersectionObserver for Reveal animations
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, observerOptions);
+
+      // 관찰 시작 함수
+      const observeElements = () => {
+        const revealElements = document.querySelectorAll('.reveal');
+        revealElements.forEach(el => observer.observe(el));
+      };
+
+      observeElements();
+      
+      // Astro의 페이지 로드 시 구동
+      document.addEventListener('astro:page-load', observeElements);
+    </script>
   </body>
 </html>

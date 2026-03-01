@@ -3,92 +3,84 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="보이지 않는 커머스의 설계자 - HELFLAB" currentPath="/">
-  <!-- Hero 섹션 -->
-  <section class="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white py-24 overflow-hidden">
-    <!-- 배경 이미지 오버레이 -->
-    <div class="absolute inset-0 opacity-20">
-      <div class="absolute inset-0 bg-[url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5"/></pattern></defs><rect width="1200" height="600" fill="url(%23grid)" /></svg>')]"></div>
-    </div>
+  <!-- Hero 섹션: 컬리 스타일의 정갈한 화이트/퍼플 배경 -->
+  <section class="relative bg-white border-b border-slate-50 pt-24 pb-32 overflow-hidden">
+    <div class="absolute top-0 right-0 w-1/3 h-full bg-[#f7f7f7] -skew-x-12 transform origin-top-right"></div>
     
     <div class="container-max relative z-10">
-      <div class="max-w-4xl">
-        <div class="mb-6 inline-block">
-          <span class="bg-blue-500/20 text-blue-200 px-4 py-2 rounded-full text-sm font-semibold border border-blue-400/30">
-            ✨ AI 기반 다음 세대 커머스 인프라
+      <div class="max-w-2xl reveal">
+        <div class="mb-12">
+          <span class="text-[#5f0080] text-xs font-black tracking-[0.2em] uppercase border-b-2 border-[#5f0080] pb-2">
+            Invisible Commerce Pioneer
           </span>
         </div>
         
-        <h1 class="text-6xl font-bold mb-6 leading-tight">
-          보이지 않는 커머스를<br />설계하는,<br /><span class="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">브랜드 성장 엔진</span>
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-12 leading-[1.15] tracking-tighter text-slate-900">
+          가장 정교한 커머스,<br />
+          <span class="text-[#5f0080]">브랜드의 성장 엔진</span>을<br />
+          설계합니다.
         </h1>
         
-        <p class="text-xl text-blue-100 mb-8 leading-relaxed max-w-2xl">
-          25년간 축적한 글로벌 소싱·물류·유통 노하우로, 정품 유통과 초고속 풀필먼트를 결합한 Invisible Commerce 인프라를 제공합니다. 국내외 16개국 브랜드와 50+ 플랫폼이 선택한 브랜드 성장 파트너입니다.
+        <p class="text-lg md:text-xl text-slate-500 mb-14 leading-relaxed font-medium">
+          25년의 글로벌 소싱 전문성과 독자적인 AI 인프라로<br class="hidden md:block" />
+          가장 투명하고 강력한 유통 생태계를 구축합니다.
         </p>
         
-        <div class="flex gap-4 flex-wrap">
-          <a href="/partnership" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition-all">
-            브랜드 제휴 문의하기
+        <div class="flex flex-col sm:flex-row gap-5">
+          <a href="/partnership" class="btn-primary px-12 py-5 text-lg shadow-lg shadow-[#5f0080]/10">
+            파트너십 제안하기
           </a>
-          <a href="/contact" class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-lg border border-white/30 transition-all">
-            풀필먼트·물류 상담 요청
+          <a href="/about" class="btn-secondary px-12 py-5 text-lg">
+            회사 소개 보기
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 특징 섹션 -->
-  <section class="py-20 bg-white">
+  <!-- Core Value -->
+  <section class="py-32 bg-white">
     <div class="container-max">
-      <div class="mb-16">
-        <h2 class="text-4xl font-bold text-gray-900 mb-4">HELFLAB의 핵심 경쟁력</h2>
-        <p class="text-xl text-gray-600">검증된 데이터와 AI 기반 최적화로 차세대 커머스를 구현합니다</p>
+      <div class="mb-24 text-center reveal">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-8 tracking-tight">HELFLAB Infrastructure</h2>
+        <p class="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
+          마켓컬리가 신선함을 배달하듯, HELFLAB은 브랜드의 신뢰를 배달합니다.<br/>
+          데이터와 기술로 완성하는 가장 프리미엄한 커머스 솔루션.
+        </p>
       </div>
       
-      <div class="grid grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
         <!-- 특징 1 -->
-        <div class="p-8 bg-gradient-to-br from-blue-50 to-slate-50 border border-blue-200 rounded-xl hover:shadow-xl transition-shadow">
-          <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-            <span class="text-2xl">🌍</span>
-          </div>
-          <h3 class="text-2xl font-bold text-gray-900 mb-3">검증된 글로벌 소싱 파워</h3>
-          <p class="text-gray-700 leading-relaxed">
-            전세계 16개국, 18,000+ SKU를 브랜드별 공식 판매권자로부터 100% 직매입하여 공급합니다. 25년간 무사고 레퍼런스를 바탕으로 가격 경쟁력과 정품 신뢰성을 동시에 확보합니다.
+        <div class="p-12 bg-[#fbfbfb] border border-slate-50 reveal group hover:bg-white hover:shadow-2xl transition-all duration-500">
+          <div class="text-4xl mb-8 group-hover:scale-110 transition-transform">🌍</div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-6 tracking-tight">글로벌 소싱 파워</h3>
+          <p class="text-slate-500 leading-relaxed mb-10 text-sm">
+            전세계 16개국 브랜드 파트너십을 통해 100% 직매입 구조를 유지합니다. 컬리의 깐깐한 기준처럼 정품 신뢰성을 시스템으로 보장합니다.
           </p>
-          <div class="mt-4 pt-4 border-t border-blue-200">
-            <p class="text-sm font-semibold text-blue-600">✓ 16개국 브랜드 파트너십</p>
-            <p class="text-sm font-semibold text-blue-600">✓ 18,000+ SKU 보유</p>
+          <div class="text-[#5f0080] font-black text-xs tracking-widest flex items-center gap-2 uppercase">
+            Learn More <span class="group-hover:translate-x-1 transition-transform">→</span>
           </div>
         </div>
-        
-        <!-- 특징 2 -->
-        <div class="p-8 bg-gradient-to-br from-cyan-50 to-slate-50 border border-cyan-200 rounded-xl hover:shadow-xl transition-shadow">
-          <div class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-            <span class="text-2xl">⚙️</span>
-          </div>
-          <h3 class="text-2xl font-bold text-gray-900 mb-3">AI 최적화 물류 인프라</h3>
-          <p class="text-gray-700 leading-relaxed">
-            용인 7,000평 전용 물류센터와 ERP/WMS/MMS/PIM/MPS 통합 시스템을 기반으로 일 평균 4,400+건, 누적 3,700만 건의 주문 데이터를 AI로 분석하여 재고 최적화와 풀필먼트 자동화를 실현합니다.
+
+        <div class="p-12 bg-[#fbfbfb] border border-slate-50 reveal reveal-delay-1 group hover:bg-white hover:shadow-2xl transition-all duration-500">
+          <div class="text-4xl mb-8 group-hover:scale-110 transition-transform">🤖</div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-6 tracking-tight">AI 물류 시스템</h3>
+          <p class="text-slate-500 leading-relaxed mb-10 text-sm">
+            3,700만 건의 데이터를 학습한 AI가 최적의 풀필먼트를 실현합니다. 샛별배송의 정밀함을 넘어서는 초정밀 재고 관리를 제공합니다.
           </p>
-          <div class="mt-4 pt-4 border-t border-cyan-200">
-            <p class="text-sm font-semibold text-cyan-600">✓ 일 4,400+건 처리</p>
-            <p class="text-sm font-semibold text-cyan-600">✓ 3,700만 건 데이터 분석</p>
+          <div class="text-[#5f0080] font-black text-xs tracking-widest flex items-center gap-2 uppercase">
+            Learn More <span class="group-hover:translate-x-1 transition-transform">→</span>
           </div>
         </div>
-        
-        <!-- 특징 3 -->
-        <div class="p-8 bg-gradient-to-br from-blue-50 to-slate-50 border border-blue-200 rounded-xl hover:shadow-xl transition-shadow">
-          <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
-            <span class="text-2xl">🚀</span>
-          </div>
-          <h3 class="text-2xl font-bold text-gray-900 mb-3">크로스보더 실행력</h3>
-          <p class="text-gray-700 leading-relaxed">
-            Taobao, Tmall, JD.com, Douyin 등 중국 20+ 메이저 플랫폼 입점 경험과 K-패션 역직구 성장 실적을 바탕으로, 글로벌 시장 진출부터 현지화 전략까지 크로스보더 커머스 풀패키지를 제공합니다.
+
+        <div class="p-12 bg-[#fbfbfb] border border-slate-50 reveal reveal-delay-2 group hover:bg-white hover:shadow-2xl transition-all duration-500">
+          <div class="text-4xl mb-8 group-hover:scale-110 transition-transform">🇨🇳</div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-6 tracking-tight">크로스보더 전략</h3>
+          <p class="text-slate-500 leading-relaxed mb-10 text-sm">
+            중국 20+ 플랫폼 진출과 성공 노하우를 바탕으로, 글로벌 마켓 진출의 모든 복잡한 과정을 HELFLAB이 책임집니다.
           </p>
-          <div class="mt-4 pt-4 border-t border-blue-200">
-            <p class="text-sm font-semibold text-blue-600">✓ 중국 20+ 플랫폼</p>
-            <p class="text-sm font-semibold text-blue-600">✓ K-브랜드 글로벌 진출</p>
+          <div class="text-[#5f0080] font-black text-xs tracking-widest flex items-center gap-2 uppercase">
+            Learn More <span class="group-hover:translate-x-1 transition-transform">→</span>
           </div>
         </div>
       </div>
@@ -96,94 +88,59 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- 최근 소식 블로그 -->
-  <section class="bg-gray-50 py-20">
+  <section class="bg-[#f7f7f7] py-32 overflow-hidden">
     <div class="container-max">
-      <div class="mb-16">
-        <h2 class="text-4xl font-bold text-gray-900 mb-4">최근 소식 & 인사이트</h2>
-        <p class="text-xl text-gray-600">커머스 시장의 최신 트렌드와 HELFLAB의 성과를 공유합니다</p>
+      <div class="mb-20 reveal">
+        <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tighter uppercase">Insights</h2>
+        <p class="text-lg text-slate-500">커머스 시장의 최신 트렌드와 HELFLAB의 혁신적 성과를 공유합니다.</p>
       </div>
       
-      <div class="grid grid-cols-3 gap-8">
-        <!-- 포스트 1 -->
-        <article class="bg-white rounded-xl overflow-hidden shadow hover:shadow-2xl transition-all hover:scale-105">
-          <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-600 relative overflow-hidden group">
-            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <span class="text-5xl">🤖</span>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {[
+          { icon: "🧠", tag: "Technology", title: "AI 시대의 Invisible Commerce,\n인프라 전략", link: "/blog/ai-invisible-commerce" },
+          { icon: "🌏", tag: "Global Biz", title: "중국 20+ 플랫폼 성과와\nK-브랜드 성공 비결", link: "/blog/china-market-expansion" },
+          { icon: "📦", tag: "Logistics", title: "통합 인프라로 구현한\n스마트 풀필먼트 자동화", link: "/blog/smart-fulfillment-system" }
+        ].map((item, i) => (
+          <article class={`bg-white border border-slate-100 reveal reveal-delay-${i} group hover:shadow-xl transition-all`}>
+            <div class="h-60 bg-[#fbfbfb] flex items-center justify-center text-6xl group-hover:scale-110 transition-transform grayscale opacity-20 group-hover:grayscale-0 group-hover:opacity-100 duration-700">
+              {item.icon}
             </div>
-          </div>
-          <div class="p-6">
-            <span class="inline-block bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full mb-3">기술 & AI</span>
-            <h3 class="text-lg font-bold mb-2 text-gray-900 line-clamp-2">
-              AI 시대의 Invisible Commerce, 데이터 기반 커머스 인프라 전략
-            </h3>
-            <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-              3,700만 건의 누적 판매 데이터를 AI로 분석하여 검색 없는 구매, 노출 중심 소비에 최적화된 차세대 커머스 시스템을 구축하고 있습니다.
-            </p>
-            <a href="/blog/ai-invisible-commerce" class="text-blue-600 font-semibold text-sm hover:text-blue-700 inline-flex items-center">
-              자세히 보기 <span class="ml-1">→</span>
-            </a>
-          </div>
-        </article>
-        
-        <!-- 포스트 2 -->
-        <article class="bg-white rounded-xl overflow-hidden shadow hover:shadow-2xl transition-all hover:scale-105">
-          <div class="h-48 bg-gradient-to-br from-cyan-500 to-blue-500 relative overflow-hidden group">
-            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <span class="text-5xl">🌏</span>
+            <div class="p-10">
+              <div class="mb-5">
+                <span class="text-[#5f0080] text-[10px] font-black uppercase tracking-widest px-2 py-0.5 border border-[#5f0080]/20 rounded-sm">
+                  {item.tag}
+                </span>
+              </div>
+              <h3 class="text-xl font-bold mb-8 text-slate-900 leading-tight group-hover:text-[#5f0080] transition-colors whitespace-pre-line">
+                {item.title}
+              </h3>
+              <a href={item.link} class="text-slate-400 font-bold text-[11px] tracking-widest flex items-center gap-2 group-hover:text-[#5f0080] transition-colors uppercase">
+                Read insight <span class="text-lg group-hover:translate-x-1 transition-transform">→</span>
+              </a>
             </div>
-          </div>
-          <div class="p-6">
-            <span class="inline-block bg-cyan-100 text-cyan-700 text-xs font-bold px-3 py-1 rounded-full mb-3">그로벌 & 유통</span>
-            <h3 class="text-lg font-bold mb-2 text-gray-900 line-clamp-2">
-              중국 20+ 플랫폼 확장 성과와 K-브랜드 글로벌 진출 전략
-            </h3>
-            <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-              Taobao부터 Douyin까지, 중국 메이저 플랫폼에서의 실제 성과 데이터와 한국 브랜드가 중국 시장에서 성공하기 위한 핵심 전략을 공개합니다.
-            </p>
-            <a href="/blog/china-market-expansion" class="text-blue-600 font-semibold text-sm hover:text-blue-700 inline-flex items-center">
-              자세히 보기 <span class="ml-1">→</span>
-            </a>
-          </div>
-        </article>
-        
-        <!-- 포스트 3 -->
-        <article class="bg-white rounded-xl overflow-hidden shadow hover:shadow-2xl transition-all hover:scale-105">
-          <div class="h-48 bg-gradient-to-br from-slate-500 to-blue-500 relative overflow-hidden group">
-            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <span class="text-5xl">📦</span>
-            </div>
-          </div>
-          <div class="p-6">
-            <span class="inline-block bg-slate-100 text-slate-700 text-xs font-bold px-3 py-1 rounded-full mb-3">물류 & 시스템</span>
-            <h3 class="text-lg font-bold mb-2 text-gray-900 line-clamp-2">
-              ERP·WMS·MMS·PIM·MPS 통합 시스템으로 구현한 스마트 풀필먼트
-            </h3>
-            <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-              상품 소싱부터 재고·물류·채널 운영까지 전 과정을 하나의 시스템으로 통합하여, 운영 효율성과 고객 만족도를 동시에 극대화한 사례를 소개합니다.
-            </p>
-            <a href="/blog/smart-fulfillment-system" class="text-blue-600 font-semibold text-sm hover:text-blue-700 inline-flex items-center">
-              자세히 보기 <span class="ml-1">→</span>
-            </a>
-          </div>
-        </article>
+          </article>
+        ))}
       </div>
     </div>
   </section>
 
-  <!-- CTA 섹션 -->
-  <section class="bg-gradient-to-r from-blue-600 via-blue-700 to-slate-800 text-white py-20">
-    <div class="container-max text-center">
-      <h2 class="text-4xl font-bold mb-4">검증된 데이터, 신뢰할 수 있는 성장</h2>
-      <p class="text-xl text-blue-100 mb-8">3,700만 건의 거래 데이터와 16개국 브랜드의 성공 사례로 증명된 HELFLAB의 실행력</p>
-      <div class="flex gap-4 justify-center flex-wrap">
-        <a href="/partnership" class="inline-block px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors shadow-lg">
+  <!-- CTA 섹션: 컬리 스타일의 딥 퍼플 -->
+  <section class="bg-[#5f0080] text-white py-32 text-center overflow-hidden relative">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent scale-150"></div>
+    <div class="container-max relative z-10 px-6">
+      <h2 class="text-3xl md:text-5xl font-extrabold mb-10 tracking-tighter leading-tight reveal">
+        검증된 데이터로 증명하는<br class="md:hidden" />
+        <span class="opacity-60">확실한 브랜드 성장 파트너십.</span>
+      </h2>
+      <p class="text-lg md:text-xl text-white/50 mb-16 max-w-2xl mx-auto font-medium reveal reveal-delay-1 leading-relaxed">
+        3,700만 건의 누적 데이터가 제시하는 최적의 솔루션으로<br class="hidden md:block"/> 브랜드의 가치를 글로벌 마켓으로 확장하세요.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center items-center reveal reveal-delay-2">
+        <a href="/partnership" class="bg-white text-[#5f0080] px-12 py-5 font-black tracking-tight rounded-sm hover:bg-slate-50 transition-all text-lg w-full sm:w-auto">
           파트너십 제안받기
         </a>
-        <a href="/contact" class="inline-block px-8 py-4 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-400 transition-colors">
-          상담 신청하기
+        <a href="/contact" class="border border-white/30 text-white px-12 py-5 font-black tracking-tight rounded-sm hover:bg-white/10 transition-all text-lg w-full sm:w-auto">
+          상세 상담 신청
         </a>
       </div>
     </div>
