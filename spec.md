@@ -43,16 +43,21 @@
 
 ## 5. 핵심 기능 가이드
 
-### 📝 블로그 운영
+### 📝 컨텐츠 관리 및 비밀 포털
 
-- 모든 글은 `src/content/blog/` 폴더 내 마크다운(`.md`) 파일로 관리됩니다.
-- **Frontmatter 필수 필드**:
-  - `title`: 제목
-  - `pubDate`: 발행일 (YYYY-MM-DD)
-  - `description`: 요약문
-  - `tag`: 카테고리 (Tech, Biz, Culture 등)
-  - `icon`: 게시물 아이콘 (Emoji)
-  - `featured`: boolean (참이면 블로그 상단 하이라이트)
+웹사이트의 컨텐츠는 Markdown 시스템을 기반으로 하며, 기술적인 지식 없이도 글을 작성할 수 있는 비밀 도구를 제공합니다.
+
+- **비밀 관리자 포털**: `/admin-write-secret`
+  - 브라우저 상에서 제목, 태그, 요약, 본문을 입력하여 마크다운 파일을 즉시 생성/다운로드할 수 있습니다.
+  - 한글 제목에 최적화된 파일명(Slug) 처리가 자동으로 이루어집니다.
+
+- **컨텐츠 컬렉션 가이드**:
+  - **Blog (`src/content/blog/`)**:
+    - `author`: 작성자 (기본값: HELFLAB Team)
+    - `readTime`: 예상 읽기 시간 (예: 10 min)
+  - **Portfolio (`src/content/portfolio/`)**:
+    - `client`: 고객사 명칭 (필수)
+  - **공통 필드**: `title`, `pubDate`, `description`, `tag`, `icon`, `featured`
 
 ### 🔗 패밀리 사이트
 
@@ -65,8 +70,13 @@
 
 ## 6. 개발 및 커밋 컨벤션
 
-- **Style**: Tailwind utility-first 사용. 모든 색상은 하드코딩 대신 `globals.css`의 컴포넌트 클래스(`btn-primary` 등) 활용 권장.
-- **Commit Message**: 디자인 변경은 `Design:`, 기능 추가는 `Feat:`, 구조 변경은 `Refactor:` 등 명확한 접두사 사용.
+### 디자인 가이드라인
+
+Tailwind utility-first를 사용하며, 모든 색상은 하드코딩 대신 `globals.css`에서 정의된 테마 변수나 컴포넌트 클래스 활용을 권장합니다.
+
+### 커밋 컨벤션
+
+디자인 변경은 `Design:`, 기능 추가는 `Feat:`, 구조 변경은 `Refactor:` 등 명확한 접두사 사용을 권장합니다.
 
 ---
 *Last Updated: 2026-03-01*
