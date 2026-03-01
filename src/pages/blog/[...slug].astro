@@ -1,0 +1,70 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('blog');
+  return blogEntries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Layout title={entry.data.title} currentPath="/blog">
+  <section class="py-24 bg-white">
+    <article class="container-max max-w-3xl">
+      <!-- 포스트 헤더 -->
+      <header class="mb-16 reveal">
+        <div class="flex items-center gap-4 mb-8">
+          <span class="text-[#5f0080] text-[10px] font-black uppercase tracking-widest px-3 py-1 border border-[#5f0080]/30 rounded-sm">
+            {entry.data.tag}
+          </span>
+          <span class="text-slate-400 text-xs font-medium">
+            {entry.data.pubDate.toLocaleDateString('ko-KR', { year: 'numeric', month: '2-digit', day: '2-digit' }).replace(/\. /g, '. ').replace(/\.$/, '')}
+          </span>
+        </div>
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-8 text-slate-900 leading-[1.2] tracking-tighter">
+          {entry.data.title}
+        </h1>
+        <div class="flex items-center gap-4 py-6 border-y border-slate-50">
+          <div class="w-10 h-10 bg-[#f7f7f7] rounded-full flex items-center justify-center text-lg">
+            {entry.data.icon}
+          </div>
+          <div>
+            <p class="text-sm font-bold text-slate-900">{entry.data.author}</p>
+            {entry.data.readTime && <p class="text-[11px] text-slate-400 font-medium italic">Reading time: {entry.data.readTime}</p>}
+          </div>
+        </div>
+      </header>
+
+      <!-- 본문 -->
+      <div class="reveal reveal-delay-1 prose prose-slate max-w-none 
+        prose-h2:text-2xl prose-h2:font-black prose-h2:tracking-tight prose-h2:text-slate-900 prose-h2:mt-16 prose-h2:mb-8
+        prose-h3:text-xl prose-h3:font-bold prose-h3:text-slate-800 prose-h3:mt-10 prose-h3:mb-4
+        prose-p:text-slate-600 prose-p:leading-relaxed prose-p:font-medium 
+        prose-strong:text-[#5f0080] prose-strong:font-bold
+        prose-blockquote:border-l-4 prose-blockquote:border-[#5f0080] prose-blockquote:bg-[#fbfbfb] prose-blockquote:py-8 prose-blockquote:px-10 prose-blockquote:rounded-sm prose-blockquote:italic prose-blockquote:text-slate-500 prose-blockquote:my-12 prose-blockquote:font-medium
+        prose-ul:list-none prose-ul:pl-0 prose-ul:space-y-3
+        prose-li:text-slate-600 prose-li:flex prose-li:items-start prose-li:gap-3
+        prose-table:w-full prose-table:my-12 prose-th:text-[10px] prose-th:font-black prose-th:text-[#5f0080] prose-th:uppercase prose-th:tracking-widest prose-th:text-left prose-th:pb-4 prose-th:border-b prose-th:border-slate-100
+        prose-td:py-6 prose-td:border-b prose-td:border-slate-50 prose-td:text-slate-600 prose-td:font-medium
+      ">
+        <Content />
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-24 reveal reveal-delay-2">
+        <div class="bg-[#5f0080] p-12 text-center rounded-sm shadow-2xl shadow-[#5f0080]/20">
+          <h3 class="text-2xl font-extrabold text-white mb-6 tracking-tight">혁신적인 커머스 인사이트,<br class="md:hidden"/> HELFLAB과 함께하세요.</h3>
+          <p class="text-white/60 mb-10 text-sm font-medium">귀사의 비즈니스 성장을 위한 최적의 데이터 전략을 제공합니다.</p>
+          <a href="/partnership" class="inline-block px-12 py-4 bg-white text-[#5f0080] font-black rounded-sm hover:bg-slate-50 transition-all uppercase text-xs tracking-widest">
+            Apply for Partnership
+          </a>
+        </div>
+      </div>
+    </article>
+  </section>
+</Layout>

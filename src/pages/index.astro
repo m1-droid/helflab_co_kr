@@ -1,5 +1,11 @@
 ---
+import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
+
+const allPosts = await getCollection('blog');
+const latestPosts = allPosts
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
+  .slice(0, 3);
 ---
 
 <Layout title="보이지 않는 커머스의 설계자 - HELFLAB" currentPath="/">
@@ -96,28 +102,26 @@ import Layout from '../layouts/Layout.astro';
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {[
-          { icon: "🧠", tag: "Technology", title: "AI 시대의 Invisible Commerce,\n인프라 전략", link: "/blog/ai-invisible-commerce" },
-          { icon: "🌏", tag: "Global Biz", title: "중국 20+ 플랫폼 성과와\nK-브랜드 성공 비결", link: "/blog/china-market-expansion" },
-          { icon: "📦", tag: "Logistics", title: "통합 인프라로 구현한\n스마트 풀필먼트 자동화", link: "/blog/smart-fulfillment-system" }
-        ].map((item, i) => (
+        {latestPosts.map((post, i) => (
           <article class={`bg-white border border-slate-100 reveal reveal-delay-${i} group hover:shadow-xl transition-all`}>
-            <div class="h-60 bg-[#fbfbfb] flex items-center justify-center text-6xl group-hover:scale-110 transition-transform grayscale opacity-20 group-hover:grayscale-0 group-hover:opacity-100 duration-700">
-              {item.icon}
-            </div>
-            <div class="p-10">
-              <div class="mb-5">
-                <span class="text-[#5f0080] text-[10px] font-black uppercase tracking-widest px-2 py-0.5 border border-[#5f0080]/20 rounded-sm">
-                  {item.tag}
-                </span>
+            <a href={`/blog/${post.slug}`}>
+              <div class="h-60 bg-[#fbfbfb] flex items-center justify-center text-6xl group-hover:scale-110 transition-transform grayscale opacity-20 group-hover:grayscale-0 group-hover:opacity-100 duration-700">
+                {post.data.icon}
               </div>
-              <h3 class="text-xl font-bold mb-8 text-slate-900 leading-tight group-hover:text-[#5f0080] transition-colors whitespace-pre-line">
-                {item.title}
-              </h3>
-              <a href={item.link} class="text-slate-400 font-bold text-[11px] tracking-widest flex items-center gap-2 group-hover:text-[#5f0080] transition-colors uppercase">
-                Read insight <span class="text-lg group-hover:translate-x-1 transition-transform">→</span>
-              </a>
-            </div>
+              <div class="p-10">
+                <div class="mb-5">
+                  <span class="text-[#5f0080] text-[10px] font-black uppercase tracking-widest px-2 py-0.5 border border-[#5f0080]/20 rounded-sm">
+                    {post.data.tag}
+                  </span>
+                </div>
+                <h3 class="text-xl font-bold mb-8 text-slate-900 leading-tight group-hover:text-[#5f0080] transition-colors whitespace-pre-line">
+                  {post.data.title}
+                </h3>
+                <div class="text-slate-400 font-bold text-[11px] tracking-widest flex items-center gap-2 group-hover:text-[#5f0080] transition-colors uppercase">
+                  Read insight <span class="text-lg group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+              </div>
+            </a>
           </article>
         ))}
       </div>
